@@ -3,9 +3,8 @@
   "type": "typo3-cms-extension",
   "description": "Displays picture credits and copyright information",
   "license": [
-    "Proprietary"
+    "GPL-3.0-or-later"
   ],
-  "version": "1.0.0",
   "authors": [
     {
       "name": "Sebastian Klein",
