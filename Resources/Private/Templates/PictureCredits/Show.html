@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:p="http://typo3.org/ns/Mfc/Picturecredits/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{fileReferences}">
+    <section class="section footer-section footer-section-credits">
+        <div class="container">
+            <div class="picture-credits">
+                <strong><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:plugin.show.heading"/></strong>
+                <ol>
+                    <f:for each="{fileReferences}" as="fileReference">
+                        <f:if condition="{fileReference.originalResource.properties.terms}">
+                            <li>
+                                <p:file.credit fileReference="{fileReference}"/>
+                            </li>
+                        </f:if>
+                    </f:for>
+                </ol>
+            </div>
+        </div>
+    </section>
+</f:if>
+</html>

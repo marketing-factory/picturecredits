@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Mfc\Picturecredits\:
+    resource: '../Classes/'
+    exclude:
+      - '../Classes/Domain/Model/'
+      - '../Classes/Domain/Types/'
+  Mfc\Picturecredits\EventListener\AddRequireJSMandatoryEvaluation:
+    tags:
+      - name: event.listener
+        identifier: 'mandatory-eval'
+        event: TYPO3\CMS\Backend\Controller\Event\AfterFormEnginePageInitializedEvent

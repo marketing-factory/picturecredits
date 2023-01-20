@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" date="2022-08-05T22:07:00Z" product-name="picturecredits"
+          datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_db.xlf">
+        <header/>
+        <body>
+            <!-- Picture terms -->
+            <trans-unit id="picture_terms">
+                <source>Picture terms</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.category">
+                <source>Picture terms category</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.template_name">
+                <source>Name of Fluid partial</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.template_name.description">
+                <source>Default template matches most cases of picture credits.</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.name">
+                <source>Picture terms name</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field">
+                <source>Field</source>
+            </trans-unit>
+
+            <!-- Tabs and palettes -->
+            <trans-unit id="picture_terms.tabs.default_fields">
+                <source>Default values</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.tabs.default_fields.description">
+                <source>Set default values (for this specific picture terms).</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.tabs.override_fields">
+                <source>Configurable fields</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.tabs.override_fields.description">
+                <source>Select the fields that editors should be able to fill/override in file metadata records (for this specific picture terms). You can configure each field to be either optional or mandatory.</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.picture">
+                <source>Picture</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.disclaimer">
+                <source>Disclaimer</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.creator">
+                <source>Creator</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.vendor">
+                <source>Vendor/Distributor</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.terms">
+                <source>Terms</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.license">
+                <source>License</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.publisher">
+                <source>Further Publisher/Agency</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.other">
+                <source>Other</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.social_media">
+                <source>Social Media</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.settings">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.palette.internal">
+                <source>Internal</source>
+            </trans-unit>
+
+            <!-- Picture terms: fields -->
+            <trans-unit id="picture_terms.field_vendor_name">
+                <source>Name of vendor</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_vendor_collection">
+                <source>Name of collection</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_vendor_collection.description">
+                <source>Some images can be bought as part of a larger collection.</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_vendor_link">
+                <source>Link to vendor</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_vendor_link.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_license_name">
+                <source>License name</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_license_name.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_license_link">
+                <source>Link to license</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_license_link.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_picture_name">
+                <source>Image title</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_picture_name.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_picture_link">
+                <source>Link to image (e.g. on vendor platform)</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_picture_link.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_socialmedia_usage">
+                <source>Image can be used on social media</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_socialmedia_usage.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_socialmedia_usage.option.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_socialmedia_usage.option.yes">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_socialmedia_usage.option.no">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_credits_on_image">
+                <source>Picture credits must be rendered directly on the image</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_credits_on_image.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_credits_on_image.option.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_credits_on_image.option.yes">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_credits_on_image.option.no">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_disclaimer">
+                <source>Special copyright/disclaimer</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_disclaimer.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_creator_name">
+                <source>Name or alias of creator</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_creator_name.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_creator_link">
+                <source>Link to creator's website/profile</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_creator_link.description">
+                <source> </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_publisher_name">
+                <source>Name of further publisher/agency</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_publisher_name.description">
+                <source>Sometimes it is necessary to mention a partner photo agency or something similar. For example: Reuters/Creator - stock.adobe.com </source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_additional_info">
+                <source>Additional information</source>
+            </trans-unit>
+            <trans-unit id="picture_terms.field_additional_info.description">
+                <source>If needed, extend the credits. For example, some licenses require to describe subsequent image editing.</source>
+            </trans-unit>
+
+            <!-- Picture terms: options for configurable fields -->
+            <trans-unit id="type.metadata_field_type.hidden">
+                <source>Do not show field to editors</source>
+            </trans-unit>
+            <trans-unit id="type.metadata_field_type.optional">
+                <source>Optional for editors</source>
+            </trans-unit>
+            <trans-unit id="type.metadata_field_type.mandatory">
+                <source>Mandatory for editors</source>
+            </trans-unit>
+            <trans-unit id="type.metadata_field_type.mandatory_if_present">
+                <source>Mandatory for editors, if given for image</source>
+            </trans-unit>
+
+            <!-- sys_file_metadata -->
+            <trans-unit id="sys_file_metadata.tabs.picturecredits">
+                <source>Picture credits</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata_item.terms">
+                <source>Picture terms</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata_item.terms.description">
+                <source>Select a vendor or license type template to display the applicable fields.</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata_item.note">
+                <source>Internal note</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata_item.note.description">
+                <source>This will not be rendered in the frontend.</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata_item.picturecredits_reviewed">
+                <source>Picture credits were reviewed</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.placeholder.default">
+                <source>Default:</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,36 @@
+{
+  "name": "mfc/picturecredits",
+  "type": "typo3-cms-extension",
+  "description": "Displays picture credits and copyright information",
+  "license": [
+    "Proprietary"
+  ],
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Sebastian Klein",
+      "role": "Developer",
+      "email": "sebastian.klein@marketing-factory.de"
+    },
+    {
+      "name": "Christian Spoo",
+      "role": "Developer",
+      "email": "christian.spoo@marketing-factory.de"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "typo3/cms-core": "^11.0",
+    "typo3/cms-frontend": "^11.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "picturecredits"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Mfc\\Picturecredits\\": "Classes/"
+    }
+  }
+}

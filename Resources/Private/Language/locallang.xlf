@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" date="2022-09-30T15:21:00Z" product-name="picturecredits"
+          datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang.xlf">
+        <header/>
+        <body>
+            <trans-unit id="plugin.show.heading">
+                <source>Picture Credits</source>
+            </trans-unit>
+            <trans-unit id="picture_term.collection">
+                <source>From collection</source>
+            </trans-unit>
+            <trans-unit id="picture_term.picture">
+                <source>Picture</source>
+            </trans-unit>
+            <trans-unit id="picture_term.license">
+                <source>License</source>
+            </trans-unit>
+            <trans-unit id="picture_term.creator">
+                <source>Creator</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
