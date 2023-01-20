@@ -18,7 +18,7 @@ TypoScript
 
             ..  container:: card-body
 
-                Setup of TypoScript.
+                TypoScript setup.
 
     ..  container:: col-md-6 pl-0 pr-3 py-3 m-0
 
@@ -30,7 +30,7 @@ TypoScript
 
             ..  container:: card-body
 
-                Setting of constants.
+                TypoScript constants.
 
 .. toctree::
    :maxdepth: 2

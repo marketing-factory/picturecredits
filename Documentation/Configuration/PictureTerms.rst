@@ -64,6 +64,3 @@ If an additional terms record is needed, follow these steps:
       :alt: Backend: Configurable fields
 
 5. Save and exit. You are done.
-
-Create new terms record
-=======================
