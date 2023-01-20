@@ -13,13 +13,16 @@ Setup
     plugin.tx_picturecredits {
         view {
             templateRootPaths {
-               0 = {$plugin.tx_picturecredits.view.templateRootPath}
+                0 = EXT:picturecredits/Resources/Private/Templates/
+                1 = {$plugin.tx_picturecredits.view.templateRootPath}
             }
             layoutRootPaths {
-               0 = {$plugin.tx_picturecredits.view.layoutRootPath}
+                0 = EXT:picturecredits/Resources/Private/Layouts/
+                1 = {$plugin.tx_picturecredits.view.layoutRootPath}
             }
             partialRootPaths {
-               0 = {$plugin.tx_picturecredits.view.partialRootPath}
+                0 = EXT:picturecredits/Resources/Private/Partials/
+                1 = {$plugin.tx_picturecredits.view.partialRootPath}
             }
         }
     }
