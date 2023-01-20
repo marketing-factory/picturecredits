@@ -93,12 +93,6 @@ return [
                     'items' => [
                         [ 'Default', 'Default', ],
                         [ 'All rights reserved', 'AllRightsReserved', ],
-                        [ 'Adobe Stock', 'Adobestock', ],
-                        [ 'Fotolia', 'Fotolia', ],
-                        [ 'Pixabay', 'Pixabay', ],
-                        [ 'Pixelio', 'Pixelio', ],
-                        [ 'Shutterstock', 'Shutterstock', ],
-                        [ 'Unsplash', 'Unsplash', ],
                     ],
                 ],
             ],
