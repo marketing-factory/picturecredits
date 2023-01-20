@@ -18,7 +18,7 @@ Picture Credits
      2022
 
 :Author:
-     Christian Spoo, Sebastian Klein
+     Christian Spoo, Sebastian Klein, Jan Sanders
 
 :Email:
      christian.spoo@marketing-factory.de, sebastian.klein@marketing-factory.de
@@ -100,18 +100,6 @@ regular content pages.
 
                 How to *fluidize* the templates, partials and sections.
 
-    ..  container:: col-md-6 pl-0 pr-3 py-3 m-0
-
-        ..  container:: card px-0 h-100
-
-            ..  rst-class:: card-header h3
-
-                ..  rubric:: :ref:`Future-features`
-
-            ..  container:: card-body
-
-                Which improvements should be implemented in EXT:picturecredits?
-
 
 .. toctree::
    :hidden:
@@ -123,6 +111,4 @@ regular content pages.
    Configuration/Index
    EditorsManual/Index
    Templates/Index
-   Developer/Index
    KnownProblems/Index
-   FutureFeatures/Index
