@@ -3,7 +3,6 @@
 use Mfc\Picturecredits\Controllers\PictureCreditsController;
 use Mfc\Picturecredits\Form\Element\TermsInputElement;
 use Mfc\Picturecredits\Form\Element\TermsRadioElement;
-use Mfc\Picturecredits\Updates\MigratePictureVendorIntoPictureTermsWizard;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 $boot = static function (): void {
@@ -29,9 +28,6 @@ $boot = static function (): void {
         'priority' => 40,
         'class' => TermsRadioElement::class,
     ];
-
-    // Upgrade wizards
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['picturecredits_MigratePictureVendorIntoPictureTermsWizard'] = MigratePictureVendorIntoPictureTermsWizard::class;
 };
 
 $boot();
