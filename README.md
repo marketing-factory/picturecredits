@@ -2,6 +2,11 @@
 
 # Picture credits (TYPO3 Extension)
 
+## Full documentation
+
+You can find a more detailed documentation on [docs.typo3.org](https://docs.typo3.org/p/mfc/picturecredits/main/en-us/) (HTML) and in the `Documentation/` folder (ReST).
+
+
 ## What does this extension do?
 
 *   Allows centralized image rights management in FAL (File Abstraction Layer)
