@@ -3,25 +3,21 @@
 
 <f:section name="collection">
     <f:if condition="{resolvedTerms.vendorCollection}">
-        <f:then>
-            <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.collection"/> "{resolvedTerms.vendorCollection}"
-        </f:then>
+        <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.collection"/> "{resolvedTerms.vendorCollection}"
     </f:if>
 </f:section>
 
 <f:section name="pictureLink">
 <f:switch expression="{file.properties.picture_link}">
-    <f:case value = "">
+    <f:case value="">
         <f:if condition="{file.properties.picture_name}">
-            <f:then>
-                "<f:format.crop maxCharacters="40">{file.properties.picture_name}</f:format.crop>":
-            </f:then>
+            "{file.properties.picture_name}":
         </f:if>
     </f:case>
     <f:defaultCase>
         <f:if condition="{file.properties.picture_name}">
             <f:then>
-                <f:link.external uri="{file.properties.picture_link}">"<f:format.crop maxCharacters="40">{file.properties.picture_name}</f:format.crop>"</f:link.external>:
+                <f:link.external uri="{file.properties.picture_link}">"{file.properties.picture_name}"</f:link.external>:
             </f:then>
             <f:else>
                 <f:link.external uri="{file.properties.picture_link}"><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.picture"/></f:link.external>:
@@ -33,19 +29,15 @@
 
 <f:section name="publisherName">
     <f:if condition="{resolvedTerms.publisherName}">
-        <f:then>
-            {resolvedTerms.publisherName} /
-        </f:then>
+        {resolvedTerms.publisherName} /
     </f:if>
 </f:section>
 
 <f:section name="creatorLink">
     <f:switch expression="{resolvedTerms.creatorLink}">
-        <f:case value = "">
+        <f:case value="">
             <f:if condition="{resolvedTerms.creatorName}">
-                <f:then>
-                    {resolvedTerms.creatorName}
-                </f:then>
+                {resolvedTerms.creatorName}
             </f:if>
         </f:case>
         <f:defaultCase>
@@ -69,11 +61,9 @@
         {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.creatorLink}', then: '{selectSeparator}')}
     </f:variable>
     <f:switch expression="{resolvedTerms.vendorLink}">
-        <f:case value = "">
+        <f:case value="">
             <f:if condition="{resolvedTerms.vendorName}">
-                <f:then>
-                    {separatorTrue}{resolvedTerms.vendorName}
-                </f:then>
+                {separatorTrue}{resolvedTerms.vendorName}
             </f:if>
         </f:case>
         <f:defaultCase>
@@ -94,11 +84,9 @@
         {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.vendorLink} || {resolvedTerms.vendorName} || {resolvedTerms.creatorLink}', then: '/')}
     </f:variable>
     <f:switch expression="{resolvedTerms.licenseLink}">
-        <f:case value = "">
+        <f:case value="">
             <f:if condition="{resolvedTerms.licenseName}">
-                <f:then>
-                    {separatorTrue}<f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license"/>: {resolvedTerms.licenseName}
-                </f:then>
+                {separatorTrue}<f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license"/>: {resolvedTerms.licenseName}
             </f:if>
         </f:case>
         <f:defaultCase>
@@ -116,17 +104,13 @@
 
 <f:section name="disclaimer">
     <f:if condition="{resolvedTerms.disclaimer}">
-        <f:then>
-            / {resolvedTerms.disclaimer}
-        </f:then>
+        / {resolvedTerms.disclaimer}
     </f:if>
 </f:section>
 
 <f:section name="additionalInfo">
     <f:if condition="{file.properties.additional_info}">
-        <f:then>
-            / {file.properties.additional_info}
-        </f:then>
+        / {file.properties.additional_info}
     </f:if>
 </f:section>
 
