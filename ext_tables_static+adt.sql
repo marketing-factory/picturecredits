@@ -54,7 +54,7 @@ INSERT INTO `picture_terms` (`uid`, `pid`, `sys_language_uid`, `name`, `template
 VALUES
   (1, 0, 0, 'Unsplash', 'default', '', '', '', '', '', '', 'Unsplash License', 'https://unsplash.com/license', '', 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
   (2, 0, 0, 'Fotolia', 'allrightsreserved', '', '', '', 'Fotolia', '', 'https://www.fotolia.com', '', 'https://stock.adobe.com/license-terms', '', 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
-  (3, 0, 0, 'Default', 'default', '', '', '', 'Default', '', '', '', '', '', 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0),
+  (3, 0, 0, 'Default', 'default', '', '', '', '', '', '', '', '', '', 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
   (4, 0, 0, 'CC-BY-4', 'default', '', '', '', '', '', '', 'CC-BY 4.0', 'https://creativecommons.org/licenses/by/4.0/', '', 1, 0, 3, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0),
   (5, 0, 0, 'CC-BY-SA-4', 'default', '', '', '', '', '', '', 'CC-BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', '', 1, 0, 3, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0),
   (6, 0, 0, 'CC-BY-3', 'default', '', '', '', '', '', '', 'CC-BY 3.0', 'https://creativecommons.org/licenses/by/3.0/', '', 1, 0, 1, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0),
