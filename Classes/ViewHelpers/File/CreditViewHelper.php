@@ -8,12 +8,10 @@ use Mfc\Picturecredits\Domain\Model\FileReference;
 use Mfc\Picturecredits\Domain\Model\PictureTerms;
 use Mfc\Picturecredits\Domain\Repository\PictureTermsRepository;
 use Mfc\Picturecredits\Utility\PictureTermsResolver;
-use Ssch\Typo3Encore\ViewHelpers\Stimulus\AbstractViewHelper;
-use TYPO3\CMS\Core\Resource\FileInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Fluid\ViewHelpers\RenderViewHelper;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
@@ -23,6 +21,8 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class CreditViewHelper extends AbstractViewHelper
 {
+    protected $escapeOutput = false;
+
     use CompileWithRenderStatic;
 
     /**
