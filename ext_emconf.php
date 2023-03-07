@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF['picturecredits'] = [
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Picture Credits',
     'description' => 'Implements a central image rights management in FAL and automated rendering of picture credits on regular content pages.',
     'category' => 'frontend',
