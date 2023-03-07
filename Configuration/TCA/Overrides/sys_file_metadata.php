@@ -191,36 +191,6 @@ call_user_func(function () {
                 ['behaviour' => ['allowLanguageSynchronization' => true]],
             ],
         ],
-        'picturecredits_reviewed' => [
-            'label' => $extLL . 'sys_file_metadata_item.picturecredits_reviewed',
-            'description' => $extLL . 'sys_file_metadata_item.picturecredits_reviewed.description',
-            'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'check',
-                'default' => 0,
-            ],
-        ],
-        'socialmedia_usage' => [
-            'label' => $extLL . 'picture_terms.field_socialmedia_usage',
-            'description' => $extLL . 'picture_terms.field_socialmedia_usage.description',
-            'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'user',
-                'renderType' => 'termsRadio',
-            ],
-        ],
-        'credits_on_image' => [
-            'label' => $extLL . 'picture_terms.field_credits_on_image',
-            'description' => $extLL . 'picture_terms.field_credits_on_image.description',
-            'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'user',
-                'renderType' => 'termsRadio',
-            ],
-        ],
         'note' => [
             'label' => $extLL . 'sys_file_metadata_item.note',
             'description' => $extLL . 'sys_file_metadata_item.note.description',
@@ -242,7 +212,7 @@ call_user_func(function () {
         categories,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
     --div--;' . $extLL . 'sys_file_metadata.tabs.picturecredits,
-        picturecredits_reviewed, terms,
+        terms,
         --palette--;' . $extLL . $termsTable . '.palette.picture;picture;;,
         --palette--;' . $extLL . $termsTable . '.palette.creator;creator;;,
         --palette--;' . $extLL . $termsTable . '.palette.vendor;vendor;;,
@@ -250,7 +220,6 @@ call_user_func(function () {
         --palette--;' . $extLL . $termsTable . '.palette.publisher;publisher;;,
         --palette--;' . $extLL . $termsTable . '.palette.disclaimer;disclaimer;;,
         --palette--;' . $extLL . $termsTable . '.palette.other;other;;,
-        --palette--;' . $extLL . $termsTable . '.palette.settings;settings;;,
         --palette--;' . $extLL . $termsTable . '.palette.internal;internal;;,
     ';
 
@@ -280,10 +249,6 @@ call_user_func(function () {
 
     $GLOBALS['TCA'][$table]['palettes']['other'] = [
         'showitem' => 'additional_info',
-    ];
-
-    $GLOBALS['TCA'][$table]['palettes']['settings'] = [
-        'showitem' => 'socialmedia_usage, --linebreak--, credits_on_image',
     ];
 
     $GLOBALS['TCA'][$table]['palettes']['internal'] = [

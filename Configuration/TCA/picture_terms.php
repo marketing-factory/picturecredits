@@ -198,36 +198,6 @@ return [
                 ['behaviour' => ['allowLanguageSynchronization' => true]],
             ],
         ],
-        'socialmedia_usage' => [
-            'label' => $extLL . $table . '.field_socialmedia_usage',
-            'description' => $extLL . $table . '.field_socialmedia_usage.description',
-            'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'check',
-                'renderType' => 'checkboxToggle',
-                'items' => [
-                    [
-                        0 => $extLL . 'picture_terms.field_socialmedia_usage.toggle',
-                    ],
-                ],
-            ],
-        ],
-        'credits_on_image' => [
-            'label' => $extLL . $table . '.field_credits_on_image',
-            'description' => $extLL . $table . '.field_credits_on_image.description',
-            'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'check',
-                'renderType' => 'checkboxToggle',
-                'items' => [
-                    [
-                        0 => $extLL . 'picture_terms.field_credits_on_image.toggle',
-                    ],
-                ],
-            ],
-        ],
         // Picture
         'field_picture_name' => TableConfigurationUtility::getFullMetadataFieldTCAConfig('field_picture_name'),
         'field_picture_link' => TableConfigurationUtility::getFullMetadataFieldTCAConfig('field_picture_link'),
@@ -247,9 +217,6 @@ return [
         'field_publisher_name' => TableConfigurationUtility::getFullMetadataFieldTCAConfig('field_publisher_name'),
         // Image postprocessing
         'field_additional_info' => TableConfigurationUtility::getFullMetadataFieldTCAConfig('field_additional_info'),
-        // Settings
-        'field_socialmedia_usage' => TableConfigurationUtility::getOptionalMetadataFieldTCAConfig('field_socialmedia_usage'),
-        'field_credits_on_image' => TableConfigurationUtility::getOptionalMetadataFieldTCAConfig('field_credits_on_image'),
     ],
     'types' => [
         0 => [
@@ -259,7 +226,6 @@ return [
                 --palette--;' . $extLL . $table . '.palette.creator;default_creator,
                 --palette--;' . $extLL . $table . '.palette.license;default_license,
                 --palette--;' . $extLL . $table . '.palette.disclaimer;default_disclaimer,
-                --palette--;' . $extLL . $table . '.palette.settings;default_settings,
                 --div--;' . $extLL . $table . '.tabs.override_fields,
                 --palette--;' . $extLL . $table . '.palette.vendor;override_vendor,
                 --palette--;' . $extLL . $table . '.palette.picture;override_picture,
@@ -268,7 +234,6 @@ return [
                 --palette--;' . $extLL . $table . '.palette.publisher;override_publisher,
                 --palette--;' . $extLL . $table . '.palette.disclaimer;override_disclaimer,
                 --palette--;' . $extLL . $table . '.palette.other;override_other,
-                --palette--;' . $extLL . $table . '.palette.settings;override_settings,
             ',
         ],
     ],
@@ -285,9 +250,6 @@ return [
         ],
         'default_disclaimer' => [
             'showitem' => 'disclaimer,',
-        ],
-        'default_settings' => [
-            'showitem' => 'socialmedia_usage, credits_on_image,',
         ],
         'override_vendor' => [
             'description' => $extLL . $table . '.tabs.override_fields.description',
@@ -310,9 +272,6 @@ return [
         ],
         'override_other' => [
             'showitem' => 'field_additional_info,',
-        ],
-        'override_settings' => [
-            'showitem' => 'field_socialmedia_usage, field_credits_on_image,',
         ],
     ],
 ];
