@@ -1,0 +1,15 @@
+1, 0, 0, 'Unsplash', 'default', '', '', '', '', '', '', 'Unsplash License', 'https://unsplash.com/license', '', 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
+2, 0, 0, 'Fotolia', 'allrightsreserved', '', '', '', 'Fotolia', '', 'https://www.fotolia.com', '', 'https://stock.adobe.com/license-terms', '', 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0
+3, 0, 0, 'Default', 'default', '', '', '', '', '', '', '', '', '', 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+4, 0, 0, 'CC-BY-4', 'default', '', '', '', '', '', '', 'CC-BY 4.0', 'https://creativecommons.org/licenses/by/4.0/', '', 1, 0, 3, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+5, 0, 0, 'CC-BY-SA-4', 'default', '', '', '', '', '', '', 'CC-BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', '', 1, 0, 3, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+6, 0, 0, 'CC-BY-3', 'default', '', '', '', '', '', '', 'CC-BY 3.0', 'https://creativecommons.org/licenses/by/3.0/', '', 1, 0, 1, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+7, 0, 0, 'CC-BY-SA-3', 'default', '', '', '', '', '', '', 'CC-BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/', '', 1, 0, 1, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+8, 0, 0, 'CC-BY-2', 'default', '', '', '', '', '', '', 'CC-BY 2.0', 'https://creativecommons.org/licenses/by/2.0/', '', 1, 0, 1, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+9, 0, 0, 'CC-BY-SA-2', 'default', '', '', '', '', '', '', 'CC-BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0/', '', 1, 0, 1, 2, 3, 2, 1, 1, 1, 1, 0, 0, 0, 3, 0, 0
+10, 0, 0, 'Pixabay', 'default', '', '', '', '', '', '', 'Pixabay License (CC0 1.0)', 'https://pixabay.com/service/terms/#license', '', 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
+11, 0, 0, 'CC0', 'default', '', '', '', '', '', '', 'CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/', '', 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0
+12, 0, 0, 'Public Domain', 'default', '', '', '', '', '', '', 'Public Domain', '', '', 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0
+13, 0, 0, 'Adobe Stock', 'allrightsreserved', '', '', '', 'stock.adobe.com', '', 'https://stock.adobe.com/', '', 'https://stock.adobe.com/license-terms', '', 0, 0, 1, 1, 0, 2, 1, 0, 0, 0, 0, 0, 3, 0, 1, 0
+14, 0, 0, 'Shutterstock', 'allrightsreserved', '', '', '', 'Shutterstock', '', 'http://shutterstock.com/', '', 'https://www.shutterstock.com/license', '', 0, 0, 1, 1, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0
+15, 0, 0, 'Pixelio', 'allrightsreserved', '', '', '', 'PIXELIO', '', 'https://www.pixelio.de/', '', 'https://www.pixelio.de/static/lizenzvertrag_redaktionell_und_kommerziell', '', 0, 0, 1, 1, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0

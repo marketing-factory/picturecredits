@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Content">
+    <h1>
+        <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.header"/>
+    </h1>
+
+    <p><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.getStarted"/></p>
+
+    <ul>
+        <li>Unsplash</li>
+        <li>Fotolia</li>
+        <li>Default</li>
+        <li>CC-BY-4</li>
+        <li>CC-BY-SA-4</li>
+        <li>CC-BY-3</li>
+        <li>CC-BY-SA-3</li>
+        <li>CC-BY-2</li>
+        <li>CC-BY-SA-2</li>
+        <li>Pixabay</li>
+        <li>CC0</li>
+        <li>Public Domain</li>
+        <li>Adobe Stock</li>
+        <li>Shutterstock</li>
+        <li>Pixelio</li>
+    </ul>
+
+    <p><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.importAfterInstallation"/></p>
+
+    <f:be.infobox title="{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.infobox.importWarning.title')}" state="1">
+        <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.infobox.importWarning.content"/>
+    </f:be.infobox>
+
+    <a href="{f:uri.action(action: 'importDefaultRecords')}"
+       class="btn btn-primary t3js-modal-trigger"
+       data-severity="warning"
+       data-title="{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.button.importRecords')}"
+       data-bs-content="{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.modal.content')}"
+       data-button-close-text="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:cancel')}">
+        <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf:module.import.button.importRecords"/>
+    </a>
+</f:section>
+
+</html>

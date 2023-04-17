@@ -28,6 +28,21 @@ $boot = static function (): void {
         'priority' => 40,
         'class' => TermsRadioElement::class,
     ];
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+        trim('
+            module.tx_picturecredits {
+                view {
+                    templateRootPaths {
+                        10 = EXT:picturecredits/Resources/Private/Templates/Backend/
+                    }
+                    layoutRootPaths {
+                       10 = EXT:picturecredits/Resources/Private/Layouts/Backend/
+                    }
+                }
+            }
+         ')
+    );
 };
 
 $boot();

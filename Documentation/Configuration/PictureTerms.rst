@@ -13,16 +13,16 @@ Import preconfigured terms
 ==========================
 The extension provides some commonly used vendors and licenses as preconfigured templates (database records).
 
-You can import these records in the Extension Manager. Use the "Data reload" button in the "Actions" column.
+You can import these records in the Backend module "Picture Credits > Import".
 
-.. figure:: /Images/BackendImportStaticData.png
+.. figure:: /Images/BackendModuleImportRecords.png
       :class: with-shadow
-      :alt: Extension Manager:
+      :alt: Backend module "Picture Credits > Import"
       :width: 600px
 
 .. warning::
 
-   Beware: The import of the default records will delete all existing records of this type!
+   Beware: Importing the preconfigured records will delete all existing records of this type!
 
 .. _create-new-terms-record:
 
