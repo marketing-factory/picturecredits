@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" date="2022-08-05T22:07:00Z" product-name="picturecredits" datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_mod.xlf" target-language="sv-SE">
+    <header/>
+    <body>
+      <trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel">
+        <source>Import preconfigured picture terms</source>
+        <target state="needs-translation">Import preconfigured picture terms</target>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr">
+        <source>Allows to import the preconfigured picture terms.&lt;br /&gt;&lt;em&gt;Access for 'admin' users only!&lt;/em&gt;</source>
+        <target state="needs-translation">Allows to import the preconfigured picture terms.&lt;br /&gt;&lt;em&gt;Access for 'admin' users only!&lt;/em&gt;</target>
+      </trans-unit>
+      <trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab">
+        <source>Import</source>
+        <target state="needs-translation">Import</target>
+      </trans-unit>
+      <trans-unit id="module.import.header" resname="module.import.header">
+        <source>Picture Credits: Import preconfigured picture terms</source>
+        <target state="needs-translation">Picture Credits: Import preconfigured picture terms</target>
+      </trans-unit>
+      <trans-unit id="module.import.getStarted" resname="module.import.getStarted">
+        <source>To get you started, the extension provides a set of commonly used picture terms:</source>
+        <target state="needs-translation">To get you started, the extension provides a set of commonly used picture terms:</target>
+      </trans-unit>
+      <trans-unit id="module.import.importAfterInstallation" resname="module.import.importAfterInstallation">
+        <source>We recommend that you import these preconfigured records into your database once after the initial installation. The records will be imported to PID 0.</source>
+        <target state="needs-translation">We recommend that you import these preconfigured records into your database once after the initial installation. The records will be imported to PID 0.</target>
+      </trans-unit>
+      <trans-unit id="module.import.infobox.importWarning.title" resname="module.import.infobox.importWarning.title">
+        <source>Warning</source>
+        <target state="needs-translation">Warning</target>
+      </trans-unit>
+      <trans-unit id="module.import.infobox.importWarning.content" resname="module.import.infobox.importWarning.content">
+        <source>Beware: Importing the preconfigured records will delete all existing records of this type!</source>
+        <target state="needs-translation">Beware: Importing the preconfigured records will delete all existing records of this type!</target>
+      </trans-unit>
+      <trans-unit id="module.import.button.importRecords" resname="module.import.button.importRecords">
+        <source>(Re)import picture terms</source>
+        <target state="needs-translation">(Re)import picture terms</target>
+      </trans-unit>
+      <trans-unit id="module.import.modal.content" resname="module.import.modal.content">
+        <source>Do you really want to delete all existing picture terms and import the preconfigured records?</source>
+        <target state="needs-translation">Do you really want to delete all existing picture terms and import the preconfigured records?</target>
+      </trans-unit>
+      <trans-unit id="module.import.flashmessage.importSuccess.title" resname="module.import.flashmessage.importSuccess.title">
+        <source>Import completed</source>
+        <target state="needs-translation">Import completed</target>
+      </trans-unit>
+      <trans-unit id="module.import.flashmessage.importSuccess.body" resname="module.import.flashmessage.importSuccess.body">
+        <source>The preconfigured records are imported to PID 0 (TYPO3 root node in page tree).</source>
+        <target state="needs-translation">The preconfigured records are imported to PID 0 (TYPO3 root node in page tree).</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
