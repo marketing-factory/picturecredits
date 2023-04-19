@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" date="2022-08-05T22:07:00Z" product-name="picturecredits" datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_db.xlf" target-language="de">
+    <header/>
+    <body>
+      <!-- Picture terms -->
+      <trans-unit id="picture_terms" approved="yes">
+        <source>Picture terms</source>
+        <target state="final">Bildnutzungsbedingungen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.category" approved="yes">
+        <source>Picture terms category</source>
+        <target state="final">Kategorie der Bildnutzungsbedingungen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.template_name" approved="yes">
+        <source>Name of Fluid partial</source>
+        <target state="final">Name des Fluid-Partials</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.template_name.description" approved="yes">
+        <source>Default template matches most cases of picture credits.</source>
+        <target state="final">Das Default-Template ist für die meisten Bildnachweise passend.</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.name" approved="yes">
+        <source>Picture terms name</source>
+        <target state="final">Name der Bildnutzungsbedingungen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field" approved="yes">
+        <source>Field</source>
+        <target state="final">Feld</target>
+      </trans-unit>
+      <!-- Tabs and palettes -->
+      <trans-unit id="picture_terms.tabs.default_fields" approved="yes">
+        <source>Default values</source>
+        <target state="final">Voreingestellte Werte</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.default_fields.description" approved="yes">
+        <source>Set default values (for this specific picture terms).</source>
+        <target state="final">Voreinstellungen der Werte (für diesen spezifischen Anbieter).</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.override_fields" approved="yes">
+        <source>Configurable fields</source>
+        <target state="final">Konfigurierbare Felder</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.override_fields.description" approved="yes">
+        <source>Select the fields that editors should be able to fill/override in file metadata records (for this specific picture terms). You can configure each field to be either optional or mandatory.</source>
+        <target state="final">Wählen Sie die Felder aus, welche Redakteure in den Metadaten (für diesen spezifischen Anbieter) ausfüllen/überschreiben dürfen. Sie können für jedes Feld konfigurieren, ob es optional oder verpflichtend ist. </target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.picture" approved="yes">
+        <source>Picture</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.disclaimer" approved="yes">
+        <source>Disclaimer</source>
+        <target state="final">Haftungsausschluss</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.creator" approved="yes">
+        <source>Creator</source>
+        <target state="final">Urheber</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.vendor" approved="yes">
+        <source>Vendor/Distributor</source>
+        <target state="final">Anbieter</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.terms" approved="yes">
+        <source>Terms</source>
+        <target state="final">Bezeichnungen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.license" approved="yes">
+        <source>License</source>
+        <target state="final">Lizenz</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.publisher" approved="yes">
+        <source>Further Publisher/Agency</source>
+        <target state="final">Weitere Bildagentur</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.other" approved="yes">
+        <source>Other</source>
+        <target state="final">Sonstiges</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.social_media" approved="yes">
+        <source>Social Media</source>
+        <target state="final">Soziale Medien</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.settings" approved="yes">
+        <source>Settings</source>
+        <target state="final">Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.internal" approved="yes">
+        <source>Internal</source>
+        <target state="final">Intern</target>
+      </trans-unit>
+      <!-- Picture terms: fields -->
+      <trans-unit id="picture_terms.field_vendor_name" approved="yes">
+        <source>Name of vendor</source>
+        <target state="final">Name des Anbieters</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_collection" approved="yes">
+        <source>Name of collection</source>
+        <target state="final">Name der Sammlung</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_collection.description" approved="yes">
+        <source>Some images can be bought as part of a larger collection.</source>
+        <target state="final">Manche Bilder können als Teil einer größeren Sammlung gekauft werden. </target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_link" approved="yes">
+        <source>Link to vendor</source>
+        <target state="final">Link zum Anbieter</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_name" approved="yes">
+        <source>License name</source>
+        <target state="final">Lizenzname</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_link" approved="yes">
+        <source>Link to license</source>
+        <target state="final">Link zur Lizenz</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_name" approved="yes">
+        <source>Image title</source>
+        <target state="final">Bildtitel</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_link" approved="yes">
+        <source>Link to image (e.g. on vendor platform)</source>
+        <target state="final">Link zum Originalbild (z.B. auf der Anbieterplattform)</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage" approved="yes">
+        <source>Image can be used on social media</source>
+        <target state="final">Das Bild darf in den sozialen Medien genutzt werden</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Voreinstellung</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.yes" approved="yes">
+        <source>Yes</source>
+        <target state="final">Ja</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.no" approved="yes">
+        <source>No</source>
+        <target state="final">Nein</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image" approved="yes">
+        <source>Picture credits must be rendered directly on the image</source>
+        <target state="final">Bildnachweise müssen direkt am Bild angezeigt werden</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Voreinstellung</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.yes" approved="yes">
+        <source>Yes</source>
+        <target state="final">Ja</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.no" approved="yes">
+        <source>No</source>
+        <target state="final">Nein</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_disclaimer" approved="yes">
+        <source>Special copyright/disclaimer</source>
+        <target state="final">Spezielles Copyright/Haftungsausschluss</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_disclaimer.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_name" approved="yes">
+        <source>Name or alias of creator</source>
+        <target state="final">Name oder Alias des Urhebers</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_link" approved="yes">
+        <source>Link to creator's website/profile</source>
+        <target state="final">Link zur Website bzw. zum Profil des Urhebers</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_publisher_name" approved="yes">
+        <source>Name of further publisher/agency</source>
+        <target state="final">Name einer weiteren Bildagentur</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_publisher_name.description" approved="yes">
+        <source>Sometimes it is necessary to mention a partner photo agency or something similar. For example: Reuters/Creator - stock.adobe.com </source>
+        <target state="final">Manchmal ist es notwendig, eine Partner-Bildagentur oder Ähnliches anzugeben. Zum Beispiel: Reuters/Urheber - stock.adobe.com</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_additional_info" approved="yes">
+        <source>Additional information</source>
+        <target state="final">Zusätzliche Informationen</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_additional_info.description" approved="yes">
+        <source>If needed, extend the credits. For example, some licenses require to describe subsequent image editing.</source>
+        <target state="final">Falls notwendig, Erweiterung des Bildnachweises. Zum Beispiel benötigen manche Lizenzen eine Beschreibung anschließender Bildbearbeitungen.</target>
+      </trans-unit>
+      <!-- Picture terms: options for configurable fields -->
+      <trans-unit id="type.metadata_field_type.hidden" approved="yes">
+        <source>Do not show field to editors</source>
+        <target state="final">Zeige das Feld nicht für Redakteure an</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.optional" approved="yes">
+        <source>Optional for editors</source>
+        <target state="final">Optional für Redakteure</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.mandatory" approved="yes">
+        <source>Mandatory for editors</source>
+        <target state="final">Pflichtangabe für Redakteure</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.mandatory_if_present" approved="yes">
+        <source>Mandatory for editors, if given for image</source>
+        <target state="final">Pflichtangabe für Redakteure, falls für das Bild verfügbar</target>
+      </trans-unit>
+      <!-- sys_file_metadata -->
+      <trans-unit id="sys_file_metadata.tabs.picturecredits" approved="yes">
+        <source>Picture credits</source>
+        <target state="final">Bildnachweise</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.terms" approved="yes">
+        <source>Picture terms</source>
+        <target state="final">Bildnutzungsbedingungen</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.terms.description" approved="yes">
+        <source>Select a vendor or license type template to display the applicable fields.</source>
+        <target state="final">Wähle eine Vorlage des Lieferanten oder der Lizenzart, um die passenden Felder anzuzeigen.</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.note" approved="yes">
+        <source>Internal note</source>
+        <target state="final">Interner Vermerk</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.note.description" approved="yes">
+        <source>This will not be rendered in the frontend.</source>
+        <target state="final">Dies wird nicht im Frontend angezeigt.</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.picturecredits_reviewed" approved="yes">
+        <source>Picture credits were reviewed</source>
+        <target state="final">Bildnachweise wurden überprüft</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata.placeholder.default" approved="yes">
+        <source>Default:</source>
+        <target state="final">Standard:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
