@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" date="2022-08-05T22:07:00Z" product-name="picturecredits" datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_db.xlf" target-language="he">
+    <header/>
+    <body>
+      <!-- Picture terms -->
+      <trans-unit id="picture_terms">
+        <source>Picture terms</source>
+        <target state="needs-translation">Picture terms</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.category">
+        <source>Picture terms category</source>
+        <target state="needs-translation">Picture terms category</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.template_name">
+        <source>Name of Fluid partial</source>
+        <target state="needs-translation">Name of Fluid partial</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.template_name.description">
+        <source>Default template matches most cases of picture credits.</source>
+        <target state="needs-translation">Default template matches most cases of picture credits.</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.name">
+        <source>Picture terms name</source>
+        <target state="needs-translation">Picture terms name</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field">
+        <source>Field</source>
+        <target state="needs-translation">Field</target>
+      </trans-unit>
+      <!-- Tabs and palettes -->
+      <trans-unit id="picture_terms.tabs.default_fields">
+        <source>Default values</source>
+        <target state="needs-translation">Default values</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.default_fields.description">
+        <source>Set default values (for this specific picture terms).</source>
+        <target state="needs-translation">Set default values (for this specific picture terms).</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.override_fields">
+        <source>Configurable fields</source>
+        <target state="needs-translation">Configurable fields</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.tabs.override_fields.description">
+        <source>Select the fields that editors should be able to fill/override in file metadata records (for this specific picture terms). You can configure each field to be either optional or mandatory.</source>
+        <target state="needs-translation">Select the fields that editors should be able to fill/override in file metadata records (for this specific picture terms). You can configure each field to be either optional or mandatory.</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.picture">
+        <source>Picture</source>
+        <target state="needs-translation">Picture</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.disclaimer">
+        <source>Disclaimer</source>
+        <target state="needs-translation">Disclaimer</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.creator">
+        <source>Creator</source>
+        <target state="needs-translation">Creator</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.vendor">
+        <source>Vendor/Distributor</source>
+        <target state="needs-translation">Vendor/Distributor</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.terms">
+        <source>Terms</source>
+        <target state="needs-translation">Terms</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.license">
+        <source>License</source>
+        <target state="needs-translation">License</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.publisher">
+        <source>Further Publisher/Agency</source>
+        <target state="needs-translation">Further Publisher/Agency</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.other">
+        <source>Other</source>
+        <target state="needs-translation">Other</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.social_media">
+        <source>Social Media</source>
+        <target state="needs-translation">Social Media</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.settings">
+        <source>Settings</source>
+        <target state="needs-translation">Settings</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.palette.internal">
+        <source>Internal</source>
+        <target state="needs-translation">Internal</target>
+      </trans-unit>
+      <!-- Picture terms: fields -->
+      <trans-unit id="picture_terms.field_vendor_name">
+        <source>Name of vendor</source>
+        <target state="needs-translation">Name of vendor</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_collection">
+        <source>Name of collection</source>
+        <target state="needs-translation">Name of collection</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_collection.description">
+        <source>Some images can be bought as part of a larger collection.</source>
+        <target state="needs-translation">Some images can be bought as part of a larger collection.</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_link">
+        <source>Link to vendor</source>
+        <target state="needs-translation">Link to vendor</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_vendor_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_name">
+        <source>License name</source>
+        <target state="needs-translation">License name</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_link">
+        <source>Link to license</source>
+        <target state="needs-translation">Link to license</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_license_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_name">
+        <source>Image title</source>
+        <target state="needs-translation">Image title</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_link">
+        <source>Link to image (e.g. on vendor platform)</source>
+        <target state="needs-translation">Link to image (e.g. on vendor platform)</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_picture_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage">
+        <source>Image can be used on social media</source>
+        <target state="needs-translation">Image can be used on social media</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.default">
+        <source>Default</source>
+        <target state="needs-translation">Default</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.yes">
+        <source>Yes</source>
+        <target state="needs-translation">Yes</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_socialmedia_usage.option.no">
+        <source>No</source>
+        <target state="needs-translation">No</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image">
+        <source>Picture credits must be rendered directly on the image</source>
+        <target state="needs-translation">Picture credits must be rendered directly on the image</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.default">
+        <source>Default</source>
+        <target state="needs-translation">Default</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.yes">
+        <source>Yes</source>
+        <target state="needs-translation">Yes</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_credits_on_image.option.no">
+        <source>No</source>
+        <target state="needs-translation">No</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_disclaimer">
+        <source>Special copyright/disclaimer</source>
+        <target state="needs-translation">Special copyright/disclaimer</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_disclaimer.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_name">
+        <source>Name or alias of creator</source>
+        <target state="needs-translation">Name or alias of creator</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_name.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_link">
+        <source>Link to creator's website/profile</source>
+        <target state="needs-translation">Link to creator's website/profile</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_creator_link.description">
+        <source> </source>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_publisher_name">
+        <source>Name of further publisher/agency</source>
+        <target state="needs-translation">Name of further publisher/agency</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_publisher_name.description">
+        <source>Sometimes it is necessary to mention a partner photo agency or something similar. For example: Reuters/Creator - stock.adobe.com </source>
+        <target state="needs-translation">Sometimes it is necessary to mention a partner photo agency or something similar. For example: Reuters/Creator - stock.adobe.com </target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_additional_info">
+        <source>Additional information</source>
+        <target state="needs-translation">Additional information</target>
+      </trans-unit>
+      <trans-unit id="picture_terms.field_additional_info.description">
+        <source>If needed, extend the credits. For example, some licenses require to describe subsequent image editing.</source>
+        <target state="needs-translation">If needed, extend the credits. For example, some licenses require to describe subsequent image editing.</target>
+      </trans-unit>
+      <!-- Picture terms: options for configurable fields -->
+      <trans-unit id="type.metadata_field_type.hidden">
+        <source>Do not show field to editors</source>
+        <target state="needs-translation">Do not show field to editors</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.optional">
+        <source>Optional for editors</source>
+        <target state="needs-translation">Optional for editors</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.mandatory">
+        <source>Mandatory for editors</source>
+        <target state="needs-translation">Mandatory for editors</target>
+      </trans-unit>
+      <trans-unit id="type.metadata_field_type.mandatory_if_present">
+        <source>Mandatory for editors, if given for image</source>
+        <target state="needs-translation">Mandatory for editors, if given for image</target>
+      </trans-unit>
+      <!-- sys_file_metadata -->
+      <trans-unit id="sys_file_metadata.tabs.picturecredits">
+        <source>Picture credits</source>
+        <target state="needs-translation">Picture credits</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.terms">
+        <source>Picture terms</source>
+        <target state="needs-translation">Picture terms</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.terms.description">
+        <source>Select a vendor or license type template to display the applicable fields.</source>
+        <target state="needs-translation">Select a vendor or license type template to display the applicable fields.</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.note">
+        <source>Internal note</source>
+        <target state="needs-translation">Internal note</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.note.description">
+        <source>This will not be rendered in the frontend.</source>
+        <target state="needs-translation">This will not be rendered in the frontend.</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata_item.picturecredits_reviewed">
+        <source>Picture credits were reviewed</source>
+        <target state="needs-translation">Picture credits were reviewed</target>
+      </trans-unit>
+      <trans-unit id="sys_file_metadata.placeholder.default">
+        <source>Default:</source>
+        <target state="needs-translation">Default:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
