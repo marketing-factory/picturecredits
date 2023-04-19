@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" date="2022-08-05T22:07:00Z" product-name="picturecredits" datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_mod.xlf" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel" approved="yes">
+        <source>Import preconfigured picture terms</source>
+        <target state="final">Vorkonfigurierte Bildnutzungsbedingungen importieren</target>
+      </trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr" approved="yes">
+        <source>Allows to import the preconfigured picture terms.&lt;br /&gt;&lt;em&gt;Access for 'admin' users only!&lt;/em&gt;</source>
+        <target state="final">Ermöglicht den Import der vorkonfigurierten Bildnutzungsbedingungen.&lt;br /&gt;&lt;em&gt;Zugriff nur für Administratoren!&lt;/em&gt;</target>
+      </trans-unit>
+      <trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab" approved="yes">
+        <source>Import</source>
+        <target state="final">Import</target>
+      </trans-unit>
+      <trans-unit id="module.import.header" resname="module.import.header" approved="yes">
+        <source>Picture Credits: Import preconfigured picture terms</source>
+        <target state="final">Bildnachweise: Import vorkonfigurierter Bildnutzungsbedingungen</target>
+      </trans-unit>
+      <trans-unit id="module.import.getStarted" resname="module.import.getStarted" approved="yes">
+        <source>To get you started, the extension provides a set of commonly used picture terms:</source>
+        <target state="final">Damit Sie gleich loslegen können, bietet die Extension eine Reihe von häufig verwendeten Bildnutzungsbedingungen:</target>
+      </trans-unit>
+      <trans-unit id="module.import.importAfterInstallation" resname="module.import.importAfterInstallation" approved="yes">
+        <source>We recommend that you import these preconfigured records into your database once after the initial installation. The records will be imported to PID 0.</source>
+        <target state="final">Wir empfehlen Ihnen, diese vorkonfigurierten Datensätze nach der Erstinstallation in Ihre Datenbank zu importieren. Die Datensätze werden in die PID 0 importiert.</target>
+      </trans-unit>
+      <trans-unit id="module.import.infobox.importWarning.title" resname="module.import.infobox.importWarning.title" approved="yes">
+        <source>Warning</source>
+        <target state="final">Achtung</target>
+      </trans-unit>
+      <trans-unit id="module.import.infobox.importWarning.content" resname="module.import.infobox.importWarning.content" approved="yes">
+        <source>Beware: Importing the preconfigured records will delete all existing records of this type!</source>
+        <target state="final">Vorsicht: Der Import der vorkonfigurierten Datensätze löscht alle bestehenden Datensätze dieses Typs!</target>
+      </trans-unit>
+      <trans-unit id="module.import.button.importRecords" resname="module.import.button.importRecords" approved="yes">
+        <source>(Re)import picture terms</source>
+        <target state="final">Bildnutzungsbedingungen (re)importieren</target>
+      </trans-unit>
+      <trans-unit id="module.import.modal.content" resname="module.import.modal.content" approved="yes">
+        <source>Do you really want to delete all existing picture terms and import the preconfigured records?</source>
+        <target state="final">Wollen Sie wirklich alle vorhandenen Bildnutzungsbedingungen löschen und die vorkonfigurierten Datensätze importieren?</target>
+      </trans-unit>
+      <trans-unit id="module.import.flashmessage.importSuccess.title" resname="module.import.flashmessage.importSuccess.title" approved="yes">
+        <source>Import completed</source>
+        <target state="final">Import abgeschlossen</target>
+      </trans-unit>
+      <trans-unit id="module.import.flashmessage.importSuccess.body" resname="module.import.flashmessage.importSuccess.body" approved="yes">
+        <source>The preconfigured records are imported to PID 0 (TYPO3 root node in page tree).</source>
+        <target state="final">Die vorkonfigurierten Datensätze wurden in die PID 0 (TYPO3-Stammknoten im Seitenbaum) importiert.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
