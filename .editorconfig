@@ -1,0 +1,65 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ReST-Files
+[*.rst]
+indent_size = 3
+
+# YAML-Files
+[*.{yaml,yml}]
+indent_size = 2
+
+# package.json
+[package.json]
+indent_size = 2
+
+# composer.json
+[composer.json]
+indent_size = 2
+
+# composer.patches.json
+[composer.patches.json]
+indent_size = 2
+
+# .eslintrc.json
+[.eslintrc.json]
+indent_size = 2
+
+# SQL-Files
+[*.sql]
+indent_size = 2
+
+# TypoScript
+
+# XLF-Files
+
+# .htaccess
+
+# CSS/SCSS-Files
+
+# TS/JS-Files
+
+# JSON-Files
+
+# HTML-Files
+
+# TWIG-Files
+
+# TPL-Files
+
+# XML-Files
+
+# PHP-Files
+
+# MD-Files
