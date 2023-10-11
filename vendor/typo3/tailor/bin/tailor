@@ -1,0 +1,50 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * This file is part of the TYPO3 project  - inspiring people to share!
+ * (c) 2020 Oliver Bartsch & Benni Mack
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ */
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Dotenv\Dotenv;
+use TYPO3\Tailor\Command;
+
+foreach ([__DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../autoload.php'] as $file) {
+    if (file_exists($file)) {
+        require $file;
+        break;
+    }
+}
+
+\call_user_func(static function() {
+    foreach ([ __DIR__ . '/../.env', __DIR__ . '/../../../../.env', __DIR__ . '/../../../../../.env'] as $file) {
+        if (file_exists($file)) {
+            if (method_exists(Dotenv::class, 'usePutenv')) {
+                $dotEnv = (new Dotenv())->usePutenv(true);
+            } else {
+                $dotEnv = new Dotenv(true);
+            }
+            $dotEnv->loadEnv($file);
+            break;
+        }
+    }
+    $application = new Application('Tailor - Your TYPO3 Extension Helper', '1.5.0');
+    $application->add(new Command\Auth\CreateTokenCommand('ter:token:create'));
+    $application->add(new Command\Auth\RefreshTokenCommand('ter:token:refresh'));
+    $application->add(new Command\Auth\RevokeTokenCommand('ter:token:revoke'));
+    $application->add(new Command\Extension\DeleteExtensionCommand('ter:delete'));
+    $application->add(new Command\Extension\ExtensionDetailsCommand('ter:details'));
+    $application->add(new Command\Extension\ExtensionVersionsCommand('ter:versions'));
+    $application->add(new Command\Extension\FindExtensionsCommand('ter:find'));
+    $application->add(new Command\Extension\RegisterExtensionCommand('ter:register'));
+    $application->add(new Command\Extension\SetExtensionVersionCommand('set-version'));
+    $application->add(new Command\Extension\TransferExtensionCommand('ter:transfer'));
+    $application->add(new Command\Extension\UpdateExtensionCommand('ter:update'));
+    $application->add(new Command\Extension\UploadExtensionVersionCommand('ter:publish'));
+    $application->add(new Command\Extension\VersionDetailsCommand('ter:version'));
+    $application->run();
+});

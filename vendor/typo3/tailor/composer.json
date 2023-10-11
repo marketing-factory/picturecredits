@@ -1,0 +1,54 @@
+{
+    "name": "typo3/tailor",
+    "description": "A CLI tool to make TYPO3 extension handling easier",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benni Mack",
+            "email": "benni@typo3.org",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Oliver Bartsch",
+            "email": "bo@cedev.de",
+            "role": "Maintainer"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "ext-zip": "*",
+        "symfony/console": "^4.4 || ^5.0 || ^6.0",
+        "symfony/dotenv": "^4.4 || ^5.0 || ^6.0",
+        "symfony/http-client": "^4.4 || ^5.0 || ^6.0",
+        "symfony/mime": "^4.4 || ^5.0 || ^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "typo3/coding-standards": "^0.4.0"
+    },
+    "bin": [
+        "bin/tailor"
+    ],
+    "autoload": {
+        "psr-4": {
+            "TYPO3\\Tailor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TYPO3\\Tailor\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "tests:unit": [
+            "@php vendor/bin/phpunit --testsuite Unit"
+        ],
+        "cs": [
+            "@php vendor/bin/php-cs-fixer fix --dry-run --diff --config=vendor/typo3/coding-standards/templates/extension_php-cs-fixer.dist.php src/ tests/"
+        ]
+    }
+}
