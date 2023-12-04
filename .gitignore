@@ -1,2 +1,6 @@
 .DS_Store
 .idea
+/composer.lock
+/var
+/vendor
+/public
