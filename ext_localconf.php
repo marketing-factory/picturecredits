@@ -3,6 +3,7 @@
 use Mfc\Picturecredits\Controllers\PictureCreditsController;
 use Mfc\Picturecredits\Form\Element\TermsInputElement;
 use Mfc\Picturecredits\Form\Element\TermsRadioElement;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 $boot = static function (): void {
@@ -29,7 +30,7 @@ $boot = static function (): void {
         'class' => TermsRadioElement::class,
     ];
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+    ExtensionManagementUtility::addTypoScriptSetup(
         trim('
             module.tx_picturecredits {
                 view {

@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
+use Mfc\Picturecredits\Controllers\BackendController;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule(
+ExtensionManagementUtility::addModule(
     'picturecredits',
     '',
     'after:web',
@@ -19,13 +21,13 @@ defined('TYPO3') or die();
 );
 
 // Module Picture Credits > Import
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+ExtensionUtility::registerModule(
     'Picturecredits',
     'picturecredits',
     'importDefaults',
     '',
     [
-        \Mfc\Picturecredits\Controllers\BackendController::class => 'import,importDefaultRecords',
+        BackendController::class => 'import,importDefaultRecords',
     ],
     [
         'labels' => 'LLL:EXT:picturecredits/Resources/Private/Language/locallang_mod_import.xlf',
