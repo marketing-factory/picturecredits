@@ -1,31 +1,26 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-
 <f:section name="collection">
     <f:if condition="{resolvedTerms.vendorCollection}">
-        <f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.collection"/> "{resolvedTerms.vendorCollection}"
+        {f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.collection')} "{resolvedTerms.vendorCollection}"
     </f:if>
 </f:section>
 
+
 <f:section name="pictureLink">
-<f:switch expression="{file.properties.picture_link}">
-    <f:case value="">
+    <f:variable name="pictureNameOrFallback"><f:spaceless>
         <f:if condition="{file.properties.picture_name}">
-            "{file.properties.picture_name}":
+            <f:then>"{file.properties.picture_name}"</f:then>
+            <f:else>{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.picture')}</f:else>
         </f:if>
-    </f:case>
-    <f:defaultCase>
-        <f:if condition="{file.properties.picture_name}">
-            <f:then>
-                <f:link.external uri="{file.properties.picture_link}">"{file.properties.picture_name}"</f:link.external>:
-            </f:then>
-            <f:else>
-                <f:link.external uri="{file.properties.picture_link}"><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.picture"/></f:link.external>:
-            </f:else>
-        </f:if>
-    </f:defaultCase>
-</f:switch>
+    </f:spaceless></f:variable>
+
+    <f:if condition="{file.properties.picture_link}">
+        <f:then><f:link.external uri="{file.properties.picture_link}">{pictureNameOrFallback}</f:link.external>:</f:then>
+        <f:else>{pictureNameOrFallback}:</f:else>
+    </f:if>
 </f:section>
+
 
 <f:section name="publisherName">
     <f:if condition="{resolvedTerms.publisherName}">
@@ -33,80 +28,79 @@
     </f:if>
 </f:section>
 
+
 <f:section name="creatorLink">
-    <f:switch expression="{resolvedTerms.creatorLink}">
-        <f:case value="">
-            <f:if condition="{resolvedTerms.creatorName}">
-                {resolvedTerms.creatorName}
-            </f:if>
-        </f:case>
-        <f:defaultCase>
-            <f:if condition="{resolvedTerms.creatorName}">
-                <f:then>
-                    <f:link.external uri="{resolvedTerms.creatorLink}">{resolvedTerms.creatorName}</f:link.external>
-                </f:then>
-                <f:else>
-                    <f:link.external uri="{resolvedTerms.creatorLink}"><f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.creator"/></f:link.external>
-                </f:else>
-            </f:if>
-        </f:defaultCase>
-    </f:switch>
+    <f:variable name="creatorNameOrFallback"><f:spaceless>
+        <f:if condition="{resolvedTerms.creatorName}">
+            <f:then>{resolvedTerms.creatorName}</f:then>
+            <f:else>{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.creator')}</f:else>
+        </f:if>
+        </f:spaceless></f:variable>
+
+    <f:if condition="{resolvedTerms.creatorLink}">
+        <f:then><f:link.external uri="{resolvedTerms.creatorLink}">{creatorNameOrFallback}</f:link.external></f:then>
+        <f:else>{creatorNameOrFallback}</f:else>
+    </f:if>
 </f:section>
+
 
 <f:section name="vendorLink">
-    <f:variable name="selectSeparator">
+    <f:variable name="vendorNameOrFallback"><f:spaceless>
+        <f:if condition="{resolvedTerms.vendorName}">
+            <f:then>{resolvedTerms.vendorName}</f:then>
+            <f:else>{resolvedTerms.vendorLink}</f:else>
+        </f:if>
+    </f:spaceless></f:variable>
+    <f:variable name="vendorSeparator">
         {f:if(condition: '{resolvedTerms.vendorName} == stock.adobe.com || {resolvedTerms.vendorName} == Fotolia', then: '-', else: '/')}
     </f:variable>
-    <f:variable name="separatorTrue">
-        {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.creatorLink}', then: '{selectSeparator}')}
+    <f:variable name="conditionalSeparator">
+        {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.creatorLink}', then: '{vendorSeparator}')}
     </f:variable>
-    <f:switch expression="{resolvedTerms.vendorLink}">
-        <f:case value="">
+
+    <f:if condition="{resolvedTerms.vendorLink}">
+        <f:then>
+            {conditionalSeparator}<f:link.external uri="{resolvedTerms.vendorLink}">{vendorNameOrFallback}</f:link.external>
+        </f:then>
+        <f:else>
             <f:if condition="{resolvedTerms.vendorName}">
-                {separatorTrue}{resolvedTerms.vendorName}
+                {conditionalSeparator}{resolvedTerms.vendorName}
             </f:if>
-        </f:case>
-        <f:defaultCase>
-            <f:if condition="{resolvedTerms.vendorName}">
-                <f:then>
-                    {separatorTrue}<f:link.external uri="{resolvedTerms.vendorLink}">{resolvedTerms.vendorName}</f:link.external>
-                </f:then>
-                <f:else>
-                    {separatorTrue}<f:link.external uri="{resolvedTerms.vendorLink}">{resolvedTerms.vendorLink}</f:link.external>
-                </f:else>
-            </f:if>
-        </f:defaultCase>
-    </f:switch>
+        </f:else>
+    </f:if>
 </f:section>
 
+
 <f:section name="licenseLink">
-    <f:variable name="separatorTrue">
+    <f:variable name="licenseNameOrFallback"><f:spaceless>
+        <f:if condition="{resolvedTerms.licenseName}">
+            <f:then>{resolvedTerms.licenseName}</f:then>
+            <f:else>{resolvedTerms.licenseLink}</f:else>
+        </f:if>
+    </f:spaceless></f:variable>
+    <f:variable name="conditionalSeparator">
         {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.vendorLink} || {resolvedTerms.vendorName} || {resolvedTerms.creatorLink}', then: '/')}
     </f:variable>
-    <f:switch expression="{resolvedTerms.licenseLink}">
-        <f:case value="">
+
+    <f:if condition="{resolvedTerms.licenseLink}">
+        <f:then>
+            {conditionalSeparator}{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license')}: <f:link.external uri="{resolvedTerms.licenseLink}">{licenseNameOrFallback}</f:link.external>
+        </f:then>
+        <f:else>
             <f:if condition="{resolvedTerms.licenseName}">
-                {separatorTrue}<f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license"/>: {resolvedTerms.licenseName}
+                {conditionalSeparator}{f:translate(key: 'LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license')}: {resolvedTerms.licenseName}
             </f:if>
-        </f:case>
-        <f:defaultCase>
-            <f:if condition="{resolvedTerms.licenseName}">
-                <f:then>
-                    {separatorTrue}<f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license"/>: <f:link.external uri="{resolvedTerms.licenseLink}">{resolvedTerms.licenseName}</f:link.external>
-                </f:then>
-                <f:else>
-                    {separatorTrue}<f:translate key="LLL:EXT:picturecredits/Resources/Private/Language/locallang.xlf:picture_term.license"/>: <f:link.external uri="{resolvedTerms.licenseLink}">{resolvedTerms.licenseLink}</f:link.external>
-                </f:else>
-            </f:if>
-        </f:defaultCase>
-    </f:switch>
+        </f:else>
+    </f:if>
 </f:section>
+
 
 <f:section name="disclaimer">
     <f:if condition="{resolvedTerms.disclaimer}">
         / {resolvedTerms.disclaimer}
     </f:if>
 </f:section>
+
 
 <f:section name="additionalInfo">
     <f:if condition="{file.properties.additional_info}">
