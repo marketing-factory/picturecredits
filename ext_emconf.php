@@ -8,10 +8,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'info@marketing-factory.de',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
-    'version' => '1.0.7',
+    'version' => '2.0.0-dev',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-11.5.99',
+            'typo3' => '12.4.9-12.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],
