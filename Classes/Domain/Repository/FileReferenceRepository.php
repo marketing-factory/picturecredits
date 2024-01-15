@@ -6,7 +6,7 @@ namespace Mfc\Picturecredits\Domain\Repository;
 
 use Mfc\Picturecredits\Domain\Model\FileReference;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Extbase\Object\ObjectManagerInterface;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
@@ -17,14 +17,15 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class FileReferenceRepository extends Repository
 {
-    public function __construct(ObjectManagerInterface $objectManager, private ConnectionPool $connectionPool)
+    public function __construct(private ConnectionPool $connectionPool)
     {
-        parent::__construct($objectManager);
+        parent::__construct();
     }
 
-    public function initializeObject()
+    public function initializeObject(): void
     {
-        $defaultQuerySettings = $this->objectManager->get(QuerySettingsInterface::class);
+        /** @var QuerySettingsInterface $defaultQuerySettings */
+        $defaultQuerySettings = GeneralUtility::makeInstance(QuerySettingsInterface::class);
         $defaultQuerySettings->setRespectStoragePage(false);
         $defaultQuerySettings->setLanguageOverlayMode(false);
         $this->setDefaultQuerySettings($defaultQuerySettings);
