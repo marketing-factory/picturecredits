@@ -9,7 +9,7 @@ Partials and sections
 Partials
 ========
 
-By default the extension uses only two different partials to render the picture credits.
+By default, the extension uses only two different partials to render the picture credits.
 
 Partial "Default"
 -----------------
@@ -57,39 +57,40 @@ Below is the example for the section :literal:`\ \ vendorLink`.
 ..  code-block:: html
     :caption: EXT:picturecredits/Resources/Private/Partials/Picturecredits/PartialSections.html
     :linenos:
-    :lineno-start: 64
+    :lineno-start: 47
 
     <f:section name="vendorLink">
-        <f:variable name="selectSeparator">
-           {f:if(condition: '{resolvedTerms.vendorName} == stock.adobe.com || {resolvedTerms.vendorName} == Fotolia.com', then: '-', else: '/')}
+        <f:variable name="vendorNameOrFallback"><f:spaceless>
+            <f:if condition="{resolvedTerms.vendorName}">
+                <f:then>{resolvedTerms.vendorName}</f:then>
+                <f:else>{resolvedTerms.vendorLink}</f:else>
+            </f:if>
+        </f:spaceless></f:variable>
+        <f:variable name="vendorSeparator">
+            {f:if(condition: '{resolvedTerms.vendorName} == stock.adobe.com || {resolvedTerms.vendorName} == Fotolia', then: '-', else: '/')}
         </f:variable>
-        <f:variable name="separatorTrue">
-           {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.creatorLink}', then: '{selectSeparator}')}
+        <f:variable name="conditionalSeparator">
+            {f:if(condition: '{resolvedTerms.creatorName} || {resolvedTerms.creatorLink}', then: '{vendorSeparator}')}
         </f:variable>
-        <f:switch expression="{resolvedTerms.vendorLink}">
-           <f:case value = "">
-              <f:if condition="{resolvedTerms.vendorName}">
-                 <f:then>
-                    {separatorTrue}{resolvedTerms.vendorName}
-                 </f:then>
-              </f:if>
-           </f:case>
-           <f:defaultCase>
-              <f:if condition="{resolvedTerms.vendorName}">
-                 <f:then>
-                    {separatorTrue}<f:link.external uri="{resolvedTerms.vendorLink}">{resolvedTerms.vendorName}</f:link.external>
-                 </f:then>
-                 <f:else>
-                    {separatorTrue}<f:link.external uri="{resolvedTerms.vendorLink}">{resolvedTerms.vendorLink}</f:link.external>
-                 </f:else>
-              </f:if>
-           </f:defaultCase>
-        </f:switch>
+
+        <f:if condition="{resolvedTerms.vendorLink}">
+            <f:then>
+                {conditionalSeparator}<f:link.external uri="{resolvedTerms.vendorLink}">{vendorNameOrFallback}</f:link.external>
+            </f:then>
+            <f:else>
+                <f:if condition="{resolvedTerms.vendorName}">
+                    {conditionalSeparator}{resolvedTerms.vendorName}
+                </f:if>
+            </f:else>
+        </f:if>
     </f:section>
 
-First it is checked, which separator will be set. Fotolia
-and AdobeStock need a :literal:`\ \ -` instead of a :literal:`\ \ /`. In the following variable it is checked, if
-a separator is needed at all.
+*   The variable `{vendorNameOrFallback}` will contain the vendor name, if given. Otherwise, the vendor link will be
+    used as link text.
+*   In the variable `{vendorSeparator}`, the correct separator is defined. Fotolia and AdobeStock need
+    a :literal:`\ \ -` instead of a :literal:`\ \ /`.
+*   In the variable `{conditionalSeparator}`, we apply this separator only if it is needed (means: the vendor link must
+    be separated from a given creator's name or link).
 
 .. tip::
 
@@ -97,6 +98,4 @@ a separator is needed at all.
    But notice, that the separators are not only set in these variables. They are also hard coded in the
    conditions.
 
-The switch case verifies, which values are set. In the default case :literal:`\ \ vendorName` refers to the
-:literal:`\ \ vendorLink`. The other case and conditions are fallbacks, if either :literal:`\ \ vendorName` or
-:literal:`\ \ vendorLink` are not set.
+After these preparations, the final vendor link and/or vendor name will be rendered in the Fluid conditions below.
