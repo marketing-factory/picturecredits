@@ -203,23 +203,23 @@ call_user_func(function () {
 
     ExtensionManagementUtility::addTCAcolumns('sys_file_metadata', $fields);
 
-    $GLOBALS['TCA'][$table]['types'][2]['showitem'] = '
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-        fileinfo, alternative, description, title, --palette--;;language,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
-        categories,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-    --div--;' . $extLL . 'sys_file_metadata.tabs.picturecredits,
-        terms,
-        --palette--;' . $extLL . $termsTable . '.palette.picture;picture;;,
-        --palette--;' . $extLL . $termsTable . '.palette.creator;creator;;,
-        --palette--;' . $extLL . $termsTable . '.palette.vendor;vendor;;,
-        --palette--;' . $extLL . $termsTable . '.palette.license;license;;,
-        --palette--;' . $extLL . $termsTable . '.palette.publisher;publisher;;,
-        --palette--;' . $extLL . $termsTable . '.palette.disclaimer;disclaimer;;,
-        --palette--;' . $extLL . $termsTable . '.palette.other;other;;,
-        --palette--;' . $extLL . $termsTable . '.palette.internal;internal;;,
-    ';
+    ExtensionManagementUtility::addToAllTCAtypes(
+        $table,
+        '
+        --div--;' . $extLL . 'sys_file_metadata.tabs.picturecredits,
+            terms,
+            --palette--;' . $extLL . $termsTable . '.palette.picture;picture;;,
+            --palette--;' . $extLL . $termsTable . '.palette.creator;creator;;,
+            --palette--;' . $extLL . $termsTable . '.palette.vendor;vendor;;,
+            --palette--;' . $extLL . $termsTable . '.palette.license;license;;,
+            --palette--;' . $extLL . $termsTable . '.palette.publisher;publisher;;,
+            --palette--;' . $extLL . $termsTable . '.palette.disclaimer;disclaimer;;,
+            --palette--;' . $extLL . $termsTable . '.palette.other;other;;,
+            --palette--;' . $extLL . $termsTable . '.palette.internal;internal;;,
+        ',
+        '2',
+        ''
+    );
 
     $GLOBALS['TCA'][$table]['palettes']['picture'] = [
         'showitem' => 'picture_name, picture_link',
