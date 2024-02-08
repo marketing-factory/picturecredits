@@ -22,7 +22,12 @@ define(
         };
         const mandatoryFields = tceForms.querySelectorAll(classes.term);
 
-        const setColor = (value, icon, isMandatoryIfPresent) => {
+        const setColor = (event) => {
+            let field = event.target;
+            let value = field.value;
+            let icon = field.parentElement.parentElement.querySelector(classes.icon);
+            let isMandatoryIfPresent = field.classList.contains(classes.ifPresent);
+
             if (value) {
                 icon.style.color = colors.ok;
             } else if (isMandatoryIfPresent) {
@@ -35,12 +40,10 @@ define(
         if (mandatoryFields !== null) {
             mandatoryFields.forEach(f => {
                 f.addEventListener('input', (e) => {
-                    let field = e.target;
-                    let value = field.value;
-                    let icon = field.parentElement.parentElement.querySelector(classes.icon);
-                    let isMandatoryIfPresent = field.classList.contains(classes.ifPresent);
-
-                    setColor(value, icon, isMandatoryIfPresent);
+                    setColor(e);
+                });
+                f.addEventListener('change', (e) => {
+                    setColor(e);
                 });
             });
         }
