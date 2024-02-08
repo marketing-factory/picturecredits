@@ -203,6 +203,23 @@ call_user_func(function () {
 
     ExtensionManagementUtility::addTCAcolumns('sys_file_metadata', $fields);
 
+    // Only if EXT:filemetadata is not installed, we need to configure file type "2" (images) here.
+    // Otherwise, this 'showitem' list would overwrite the extension's field list.
+    if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('filemetadata')) {
+        $GLOBALS['TCA']['sys_file_metadata'] = array_replace_recursive($GLOBALS['TCA']['sys_file_metadata'], [
+            'types' => [
+                '2' => ['showitem' => '
+                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                        fileinfo, alternative, description, title, --palette--;;language,
+                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                        categories,
+                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+                '],
+            ]
+        ]);
+    }
+
+    // Add custom fields only for files of type "2" (images):
     ExtensionManagementUtility::addToAllTCAtypes(
         $table,
         '
@@ -215,7 +232,7 @@ call_user_func(function () {
             --palette--;' . $extLL . $termsTable . '.palette.publisher;publisher;;,
             --palette--;' . $extLL . $termsTable . '.palette.disclaimer;disclaimer;;,
             --palette--;' . $extLL . $termsTable . '.palette.other;other;;,
-            --palette--;' . $extLL . $termsTable . '.palette.internal;internal;;,
+            --palette--;' . $extLL . $termsTable . '.palette.internal;internal;;
         ',
         '2',
         ''
