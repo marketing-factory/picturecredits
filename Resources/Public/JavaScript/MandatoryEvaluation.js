@@ -2,13 +2,17 @@
  * Changes the icon color of fields with RenderType "termsInput",
  * depending on existing value and MetadataFieldType.
  * @author Sebastian Klein <sebastian.klein@marketing-factory.de>
- * @exports TYPO3/CMS/Picturecredits/MandatoryEvaluation
  */
-define(
-    ['require', 'exports'],
-    function (require, exports) {
-        'use strict';
+import DocumentService from "@typo3/core/document-service.js";
 
+class MandatoryEvaluation {
+    constructor() {
+        DocumentService.ready().then((() => {
+            this.evaluateFields();
+        }))
+    }
+
+    evaluateFields() {
         const tceForms = document.getElementById('EditDocumentController');
         const colors = {
             ok: '#79a548',
@@ -47,4 +51,7 @@ define(
                 });
             });
         }
-    });
+    }
+}
+
+export default new MandatoryEvaluation;
