@@ -9,7 +9,7 @@ services:
     exclude:
       - '../Classes/Domain/Model/'
       - '../Classes/Domain/Types/'
-  Mfc\Picturecredits\EventListener\AddRequireJSMandatoryEvaluation:
+  Mfc\Picturecredits\EventListener\AddMandatoryEvaluation:
     tags:
       - name: event.listener
         identifier: 'mandatory-eval'
