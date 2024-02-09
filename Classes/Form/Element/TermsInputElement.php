@@ -35,28 +35,28 @@ class TermsInputElement extends AbstractFormElement
     ];
 
     /**
-     * @var IconFactory
-     */
-    protected $iconFactory;
-
-    /**
      * @var PictureTermsRepository
      */
     protected $pictureTermsRepository;
 
-    /**
-     * @param NodeFactory $nodeFactory
-     * @param array $data
-     */
-    public function __construct(NodeFactory $nodeFactory, array $data)
-    {
-        parent::__construct($nodeFactory, $data);
-
-        $this->iconFactory = GeneralUtility::makeInstance(IconFactory::class);
+    public function __construct(
+        NodeFactory $nodeFactory,
+        IconFactory $iconFactory
+    ) {
+        $this->nodeFactory = $nodeFactory;
+        $this->iconFactory = $iconFactory;
         $this->pictureTermsRepository = GeneralUtility::makeInstance(PictureTermsRepository::class);
     }
 
-    public function render():array
+    public function setData(array $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return array<string, array<int, string|JavaScriptModuleInstruction>|string> As defined in initializeResultArray() of AbstractNode
+     */
+    public function render(): array
     {
         $row = $this->data['databaseRow'];
         $parameterArray = $this->data['parameterArray'];
@@ -69,6 +69,10 @@ class TermsInputElement extends AbstractFormElement
         $fieldInformationResult = $this->renderFieldInformation();
         $fieldInformationHtml = $fieldInformationResult['html'];
         $resultArray = $this->mergeChildReturnIntoExistingResult($this->initializeResultArray(), $fieldInformationResult, false);
+
+        // Needed to keep TYPO3 v12 compatibility:
+        $resultArray['labelHasBeenHandled'] = true;
+
         $itemValue = $parameterArray['itemFormElValue'];
 
         $icons = [
@@ -85,6 +89,7 @@ class TermsInputElement extends AbstractFormElement
         $iconColor = $colors['notMandatory'];
 
         $fieldId = StringUtility::getUniqueId('formengine-input-');
+        $renderedLabel = $this->renderLabel($fieldId);
 
         $attributes = [
             'id' => $fieldId,
@@ -133,6 +138,8 @@ class TermsInputElement extends AbstractFormElement
             return $resultArray = [];
         }
 
+        $html = [];
+        $html[] = $renderedLabel;
         $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
         $html[] =     $fieldInformationHtml;
         $html[] =     '<div class="form-control-wrap">';

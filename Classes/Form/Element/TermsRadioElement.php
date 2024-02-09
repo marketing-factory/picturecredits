@@ -9,6 +9,7 @@ use Mfc\Picturecredits\Type\MetadataFieldType;
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Backend\Form\NodeFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\StringUtility;
 
 /**
  * Class TermsRadioElement
@@ -36,23 +37,24 @@ class TermsRadioElement extends AbstractFormElement
      */
     protected $pictureTermsRepository;
 
-    /**
-     * @param NodeFactory $nodeFactory
-     * @param array $data
-     */
-    public function __construct(NodeFactory $nodeFactory, array $data)
-    {
-        parent::__construct($nodeFactory, $data);
+    public function __construct(
+        NodeFactory $nodeFactory
+    ) {
+        $this->nodeFactory = $nodeFactory;
         $this->pictureTermsRepository = GeneralUtility::makeInstance(PictureTermsRepository::class);
     }
 
+    public function setData(array $data): void
+    {
+        $this->data = $data;
+    }
 
     /**
      * This will render a series of radio buttons.
      *
      * @return array As defined in initializeResultArray() of AbstractNode
      */
-    public function render()
+    public function render(): array
     {
         $row = $this->data['databaseRow'];
         $resultArray = $this->initializeResultArray();
@@ -105,23 +107,23 @@ class TermsRadioElement extends AbstractFormElement
 
         $items = [
             0 => [
-                0 => $this->getLanguageService()->sL($labelDefault) . ' (' . $this->getLanguageService()->sL($labelDefaultValue) . ')',
-                1 => 0,
+                'label' => $this->getLanguageService()->sL($labelDefault) . ' (' . $this->getLanguageService()->sL($labelDefaultValue) . ')',
+                'value' => 0,
             ],
             1 => [
-                0 => $this->getLanguageService()->sL($labelYes),
-                1 => 1,
+                'label' => $this->getLanguageService()->sL($labelYes),
+                'value' => 1,
             ],
             2 => [
-                0 => $this->getLanguageService()->sL($labelNo),
-                1 => 2,
+                'label' => $this->getLanguageService()->sL($labelNo),
+                'value' => 2,
             ],
         ];
 
         foreach ($items as $itemNumber => $itemLabelAndValue) {
-            $label = $itemLabelAndValue[0];
-            $value = $itemLabelAndValue[1];
-            $radioId = htmlspecialchars($this->data['parameterArray']['itemFormElID'] . '_' . $itemNumber);
+            $label = $itemLabelAndValue['label'];
+            $value = $itemLabelAndValue['value'];
+            $radioId = htmlspecialchars(StringUtility::getUniqueId('formengine-radio-') . '-' . $itemNumber);
             $radioElementAttrs = array_merge(
                 [
                     'type' => 'radio',
@@ -155,7 +157,7 @@ class TermsRadioElement extends AbstractFormElement
         $html[] =   '</div>';
         $html[] = '</div>';
 
-        $resultArray['html'] = implode(LF, $html);
+        $resultArray['html'] = $this->wrapWithFieldsetAndLegend(implode(LF, $html));
         return $resultArray;
     }
 }

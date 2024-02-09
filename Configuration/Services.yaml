@@ -9,3 +9,7 @@ services:
     exclude:
       - '../Classes/Domain/Model/'
       - '../Classes/Domain/Types/'
+  Mfc\Picturecredits\Form\Element\TermsInputElement:
+    public: true
+  Mfc\Picturecredits\Form\Element\TermsRadioElement:
+    public: true
