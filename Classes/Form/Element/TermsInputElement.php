@@ -151,6 +151,10 @@ class TermsInputElement extends AbstractFormElement
         $html[] = '</div>';
         $resultArray['html'] = implode(LF, $html);
 
+        $resultArray['javaScriptModules'][] = JavaScriptModuleInstruction::create(
+            '@mfc/picturecredits-mandatory-evaluation'
+        );
+
         return $resultArray;
     }
 }
