@@ -27,7 +27,6 @@ class FileReferenceRepository extends Repository
         /** @var QuerySettingsInterface $defaultQuerySettings */
         $defaultQuerySettings = GeneralUtility::makeInstance(QuerySettingsInterface::class);
         $defaultQuerySettings->setRespectStoragePage(false);
-        $defaultQuerySettings->setLanguageOverlayMode(false);
         $this->setDefaultQuerySettings($defaultQuerySettings);
     }
 
@@ -55,7 +54,7 @@ class FileReferenceRepository extends Repository
                         )
                     );
 
-                $rowCount = $query->execute()->rowCount();
+                $rowCount = $query->executeQuery()->rowCount();
                 return $rowCount > 0;
             }
         );

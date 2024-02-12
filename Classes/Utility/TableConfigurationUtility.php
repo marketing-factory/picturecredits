@@ -28,10 +28,22 @@ class TableConfigurationUtility
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [$ll . 'type.metadata_field_type.hidden', MetadataFieldType::HIDDEN],
-                    [$ll . 'type.metadata_field_type.optional', MetadataFieldType::OPTIONAL],
-                    [$ll . 'type.metadata_field_type.mandatory', MetadataFieldType::MANDATORY],
-                    [$ll . 'type.metadata_field_type.mandatory_if_present', MetadataFieldType::MANDATORY_IF_PRESENT],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.hidden',
+                        'value' => MetadataFieldType::HIDDEN
+                    ],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.optional',
+                        'value' => MetadataFieldType::OPTIONAL
+                    ],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.mandatory',
+                        'value' => MetadataFieldType::MANDATORY
+                    ],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.mandatory_if_present',
+                        'value' => MetadataFieldType::MANDATORY_IF_PRESENT
+                    ],
                 ],
             ],
         ];
@@ -58,8 +70,14 @@ class TableConfigurationUtility
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    [$ll . 'type.metadata_field_type.hidden', MetadataFieldType::HIDDEN],
-                    [$ll . 'type.metadata_field_type.optional', MetadataFieldType::OPTIONAL],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.hidden',
+                        'value' => MetadataFieldType::HIDDEN
+                    ],
+                    [
+                        'label' => $ll . 'type.metadata_field_type.optional',
+                        'value' => MetadataFieldType::OPTIONAL
+                    ],
                 ],
             ],
         ];

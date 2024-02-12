@@ -18,10 +18,12 @@ call_user_func(function () {
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => '', 'value' => 0],
+                ],
                 'foreign_table' => 'picture_terms',
                 'foreign_table_where' => 'AND {#picture_terms}.{#pid} = 0 AND {#picture_terms}.{#l10n_parent} = 0',
                 'default' => 0,
-                'items' => [['', 0]]
             ],
             'onChange' => 'reload',
             'l10n_mode' => 'exclude',
