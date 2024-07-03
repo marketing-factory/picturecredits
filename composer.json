@@ -19,8 +19,8 @@
   ],
   "require": {
     "php": ">=8.1",
-    "typo3/cms-core": ">=12.4.9 <13.1.99",
-    "typo3/cms-frontend": ">=12.4.9 <13.1.99"
+    "typo3/cms-core": ">=12.4.9 <13.2.99",
+    "typo3/cms-frontend": ">=12.4.9 <13.2.99"
   },
   "extra": {
     "typo3/cms": {
