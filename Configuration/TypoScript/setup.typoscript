@@ -15,7 +15,7 @@ plugin.tx_picturecredits {
     }
 }
 
-lib.picture_credits = USER_INT
+lib.picture_credits = USER
 lib.picture_credits {
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
     extensionName = PictureCredits

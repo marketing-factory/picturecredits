@@ -13,9 +13,6 @@ $boot = static function (): void {
         [
             PictureCreditsController::class => 'show',
         ],
-        [
-            PictureCreditsController::class => 'show',
-        ],
     );
 
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1660899595] = [
