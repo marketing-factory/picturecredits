@@ -1,4 +1,3 @@
-.. include:: /Includes.rst.txt
 .. index:: Templates; Override
 .. _templates-override:
 

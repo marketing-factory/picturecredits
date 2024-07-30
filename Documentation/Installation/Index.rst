@@ -1,4 +1,3 @@
-.. include:: /Includes.rst.txt
 
 .. _installation:
 
@@ -21,24 +20,24 @@ Installing the extension prior to TYPO3 11.4
 --------------------------------------------
 Before TYPO3 11.4 you have to activate extension installed via Composer by using the Extension Manager:
 
-* Navigate to :guilabel:`&Admin Tools > Extensions > Installed Extensions`
-* Search for :literal:`\ \ picturecredits`
-* Activate the extension by clicking on the :guilabel:`&Activate button` in the :guilabel:`&A/D` column
+* Navigate to :guilabel:`Admin Tools > Extensions > Installed Extensions`
+* Search for :literal:`picturecredits`
+* Activate the extension by clicking on the :guilabel:`Activate button` in the :guilabel:`A/D` column
 
 Extension Manager
 =================
 
 For a TYPO3 installation working without Composer install the extension via Extension Manager:
 
-* Navigate to :guilabel:`&Admin Tools > Extensions > Installed Extensions`
-* Click on :guilabel:`&Update now`
-* Click :guilabel:`&import and install` on the side of the extension entry
+* Navigate to :guilabel:`Admin Tools > Extensions > Installed Extensions`
+* Click on :guilabel:`Update now`
+* Click :guilabel:`import and install` on the side of the extension entry
 
 activate it:
 
-* Navigate to :guilabel:`&Admin Tools > Extensions > Installed Extensions`
-* Search for :literal:`\ \ picturecredits`
-* Activate the extension by clicking on the :guilabel:`&Activate button` in the :guilabel:`&A/D` column
+* Navigate to :guilabel:`Admin Tools > Extensions > Installed Extensions`
+* Search for :literal:`picturecredits`
+* Activate the extension by clicking on the :guilabel:`Activate button` in the :guilabel:`A/D` column
 
 .. tip::
 

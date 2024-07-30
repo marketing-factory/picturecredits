@@ -1,4 +1,3 @@
-.. include:: /Includes.rst.txt
 .. index:: Templates; Partials
 .. _templates-partials:
 
@@ -33,8 +32,8 @@ It works best with all of the CC-licenses or similar.
 Partial "Allrightsreserved"
 ---------------------------
 The second partial matches most of the stock photos.
-It renders only part of the sections and inserts the Copyright Sign. The sections :literal:`\ \ collection`
-and :literal:`\ \ publisherName` are only required in the rarest cases. So if you do not need them,
+It renders only part of the sections and inserts the Copyright Sign. The sections :literal:`collection`
+and :literal:`publisherName` are only required in the rarest cases. So if you do not need them,
 delete the lines concerned or better, just create a new partial without them.
 
 ..  code-block:: html
@@ -52,7 +51,7 @@ delete the lines concerned or better, just create a new partial without them.
 Sections
 ========
 
-Below is the example for the section :literal:`\ \ vendorLink`.
+Below is the example for the section :literal:`vendorLink`.
 
 ..  code-block:: html
     :caption: EXT:picturecredits/Resources/Private/Partials/Picturecredits/PartialSections.html
@@ -88,13 +87,13 @@ Below is the example for the section :literal:`\ \ vendorLink`.
 *   The variable `{vendorNameOrFallback}` will contain the vendor name, if given. Otherwise, the vendor link will be
     used as link text.
 *   In the variable `{vendorSeparator}`, the correct separator is defined. Fotolia and AdobeStock need
-    a :literal:`\ \ -` instead of a :literal:`\ \ /`.
+    a :html:`-` instead of a :html:`/`.
 *   In the variable `{conditionalSeparator}`, we apply this separator only if it is needed (means: the vendor link must
     be separated from a given creator's name or link).
 
 .. tip::
 
-   If you prefer another separator e.g. a :literal:`\ \ ,`, you can change it in the sections.
+   If you prefer another separator (e.g. a :html:`,`), you can change it in the sections.
    But notice, that the separators are not only set in these variables. They are also hard coded in the
    conditions.
 

@@ -1,4 +1,3 @@
-.. include:: /Includes.rst.txt
 .. index:: Configuration
 .. _picture-terms-configuration:
 
@@ -13,7 +12,7 @@ Import preconfigured terms
 ==========================
 The extension provides some commonly used vendors and licenses as preconfigured templates (database records).
 
-You can import these records in the Backend module "Picture Credits > Import".
+You can import these records in the Backend module :guilabel:`Picture Credits > Import`.
 
 .. figure:: /Images/BackendModuleImportRecords.png
       :class: with-shadow

@@ -1,4 +1,3 @@
-.. include:: /Includes.rst.txt
 .. _start:
 
 ===============
@@ -100,6 +99,7 @@ regular content pages.
 
                 How to *fluidize* the templates, partials and sections.
 
+.. Table of Contents
 
 .. toctree::
    :hidden:
@@ -112,3 +112,10 @@ regular content pages.
    EditorsManual/Index
    Templates/Index
    KnownProblems/Index
+
+.. Meta Menu
+
+.. toctree::
+   :hidden:
+
+   Sitemap
