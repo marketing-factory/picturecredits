@@ -1,0 +1,24 @@
+plugin.tx_picturecredits {
+    view {
+        templateRootPaths {
+            0 = EXT:picturecredits/Resources/Private/Templates/
+            1 = {$plugin.tx_picturecredits.view.templateRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:picturecredits/Resources/Private/Layouts/
+            1 = {$plugin.tx_picturecredits.view.layoutRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:picturecredits/Resources/Private/Partials/
+            1 = {$plugin.tx_picturecredits.view.partialRootPath}
+        }
+    }
+}
+
+lib.picture_credits = USER
+lib.picture_credits {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = PictureCredits
+    pluginName = PictureCredits
+    controllerName = PictureCredit
+}

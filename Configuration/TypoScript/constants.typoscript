@@ -1,7 +1,1 @@
-plugin.tx_picturecredits {
-    view {
-        templateRootPath = EXT:picturecredits/Resources/Private/Templates/
-        partialRootPath = EXT:picturecredits/Resources/Private/Partials/
-        layoutRootPath = EXT:picturecredits/Resources/Private/Layouts/
-    }
-}
+@import 'EXT:picturecredits/Configuration/Sets/Picturecredits/constants.typoscript'
