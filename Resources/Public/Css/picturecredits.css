@@ -1,0 +1,29 @@
+:root {
+    --picturecredits-color-ok: #79a548;
+    --picturecredits-color-mandatory: #c83c3c;
+    --picturecredits-color-mandatory-if-present: #e8a33d;
+}
+
+.is-mandatory .t3js-termsinput-icon-default {
+    color: var(--picturecredits-color-mandatory);
+}
+
+.is-mandatory-if-present .t3js-termsinput-icon-default {
+    color: var(--picturecredits-color-mandatory-if-present);
+}
+
+.t3js-termsinput-icons.has-value {
+    color: var(--picturecredits-color-ok);
+}
+
+.t3js-termsinput-icon-checked {
+    display: none;
+}
+
+.t3js-termsinput-icons.has-value .t3js-termsinput-icon-default {
+    display: none;
+}
+
+.t3js-termsinput-icons.has-value .t3js-termsinput-icon-checked {
+    display: block;
+}

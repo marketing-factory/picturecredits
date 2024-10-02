@@ -39,12 +39,17 @@ class TermsInputElement extends AbstractFormElement
      */
     protected $pictureTermsRepository;
 
+    protected $iconFactory;
+
+    public function injectIconFactory(IconFactory $iconFactory)
+    {
+        $this->iconFactory = $iconFactory;
+    }
+
     public function __construct(
-        NodeFactory $nodeFactory,
-        IconFactory $iconFactory
+        NodeFactory $nodeFactory
     ) {
         $this->nodeFactory = $nodeFactory;
-        $this->iconFactory = $iconFactory;
         $this->pictureTermsRepository = GeneralUtility::makeInstance(PictureTermsRepository::class);
     }
 
@@ -60,15 +65,16 @@ class TermsInputElement extends AbstractFormElement
     {
         $row = $this->data['databaseRow'];
         $parameterArray = $this->data['parameterArray'];
+        $resultArray = $this->initializeResultArray();
 
         // Don't render field if no picture terms are selected:
         if ((int)current($row['terms']) === 0) {
-            return $resultArray = [];
+            return $resultArray;
         }
 
         $fieldInformationResult = $this->renderFieldInformation();
         $fieldInformationHtml = $fieldInformationResult['html'];
-        $resultArray = $this->mergeChildReturnIntoExistingResult($this->initializeResultArray(), $fieldInformationResult, false);
+        $resultArray = $this->mergeChildReturnIntoExistingResult($resultArray, $fieldInformationResult, false);
 
         // Needed to keep TYPO3 v12 compatibility:
         $resultArray['labelHasBeenHandled'] = true;
@@ -76,17 +82,14 @@ class TermsInputElement extends AbstractFormElement
         $itemValue = $parameterArray['itemFormElValue'];
 
         $icons = [
-            'empty' => 'miscellaneous-placeholder',
-            'exclamation' => 'actions-exclamation-circle-alt'
-        ];
-        $colors = [
-            'notMandatory' => 'transparent',
-            'ok' => '#79a548',
-            'mandatory' => '#c83c3c',
-            'mandatoryIfPresent' => '#e8a33d'
+            'empty' => $this->iconFactory->getIcon('miscellaneous-placeholder', Icon::SIZE_SMALL)->render('inline'),
+            'exclamation' => $this->iconFactory->getIcon('actions-exclamation-triangle-alt', Icon::SIZE_SMALL)->render('inline'),
+            'checkmark' => $this->iconFactory->getIcon('actions-check-circle-alt', Icon::SIZE_SMALL)->render('inline')
         ];
         $icon = $icons['empty'];
-        $iconColor = $colors['notMandatory'];
+        $iconClass = '';
+        $iconChecked = '';
+        $hasInitialValue = ($itemValue) ? ' has-value' : '';
 
         $fieldId = StringUtility::getUniqueId('formengine-input-');
         $renderedLabel = $this->renderLabel($fieldId);
@@ -115,14 +118,16 @@ class TermsInputElement extends AbstractFormElement
 
                 // Depending on field configuration: don't render field, or set mandatory hints:
                 if ($fieldType === MetadataFieldType::HIDDEN) {
-                    return $resultArray = [];
+                    return $resultArray = $this->initializeResultArray();
                 } elseif ($fieldType === MetadataFieldType::MANDATORY) {
+                    $iconClass = ' is-mandatory';
                     $icon = $icons['exclamation'];
-                    $iconColor = ($itemValue) ? $colors['ok'] : $colors['mandatory'];
+                    $iconChecked = '<span class="t3js-termsinput-icon-checked">' . $icons['checkmark'] . '</span>';
                     $attributes['class'] .= ' t3js-mandatory-term';
                 } elseif ($fieldType === MetadataFieldType::MANDATORY_IF_PRESENT) {
+                    $iconClass = ' is-mandatory-if-present';
                     $icon = $icons['exclamation'];
-                    $iconColor = ($itemValue) ? $colors['ok'] : $colors['mandatoryIfPresent'];
+                    $iconChecked = '<span class="t3js-termsinput-icon-checked">' . $icons['checkmark'] . '</span>';
                     $attributes['class'] .= ' t3js-mandatory-term t3js-mandatory-term-if-present';
                 }
 
@@ -135,7 +140,7 @@ class TermsInputElement extends AbstractFormElement
         } catch (\RuntimeException $ignoredException) {
             // deliberately empty
         } catch (DBALException $e) {
-            return $resultArray = [];
+            return $resultArray = $this->initializeResultArray();
         }
 
         $html = [];
@@ -146,8 +151,9 @@ class TermsInputElement extends AbstractFormElement
         $html[] =         '<div class="form-wizards-wrap">';
         $html[] =             '<div class="form-wizards-element">';
         $html[] =                 '<div class="input-group">';
-        $html[] =                     '<span class="input-group-addon input-group-icon t3js-form-field-termsinput-icon" style="color: ' . $iconColor . ';">';
-        $html[] =                         $this->iconFactory->getIcon($icon, Icon::SIZE_SMALL)->render();
+        $html[] =                     '<span class="input-group-text input-group-icon t3js-termsinput-icons' . $iconClass . $hasInitialValue . '">';
+        $html[] =                         '<span class="t3js-termsinput-icon-default">' . $icon . '</span>';
+        $html[] =                         $iconChecked;
         $html[] =                     '</span>';
         $html[] =                     '<input type="text"' . GeneralUtility::implodeAttributes($attributes, true) . ' />';
         $html[] =                     '<input type="hidden" name="' . $parameterArray['itemFormElName'] . '" value="' . htmlspecialchars((string)$itemValue) . '" />';
