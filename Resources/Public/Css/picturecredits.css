@@ -1,0 +1,32 @@
+:root {
+    --picturecredits-color-ok: #247554;
+    --picturecredits-color-ok-dark: #3cc38c;
+    --picturecredits-color-mandatory: #a72e25;
+    --picturecredits-color-mandatory-dark: #da6158;
+    --picturecredits-color-mandatory-if-present: #c95b00;
+    --picturecredits-color-mandatory-if-present-dark: #ffc857;
+}
+
+.is-mandatory .t3js-termsinput-icon-default {
+    color: light-dark(var(--picturecredits-color-mandatory), var(--picturecredits-color-mandatory-dark));
+}
+
+.is-mandatory-if-present .t3js-termsinput-icon-default {
+    color: light-dark(var(--picturecredits-color-mandatory-if-present), var(--picturecredits-color-mandatory-if-present-dark));
+}
+
+.t3js-termsinput-icons.has-value {
+    color: light-dark(var(--picturecredits-color-ok), var(--picturecredits-color-ok-dark));
+}
+
+.t3js-termsinput-icon-checked {
+    display: none;
+}
+
+.t3js-termsinput-icons.has-value .t3js-termsinput-icon-default {
+    display: none;
+}
+
+.t3js-termsinput-icons.has-value .t3js-termsinput-icon-checked {
+    display: block;
+}

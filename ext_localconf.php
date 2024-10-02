@@ -41,6 +41,9 @@ $boot = static function (): void {
             }
          ')
     );
+
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['stylesheets']['picturecredits']
+        = 'EXT:picturecredits/Resources/Public/Css/';
 };
 
 $boot();
