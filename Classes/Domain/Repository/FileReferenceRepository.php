@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Mfc\Picturecredits\Domain\Repository;
 
 use Mfc\Picturecredits\Domain\Model\FileReference;
+use Mfc\Picturecredits\Event\AfterImageReferencesDeduplicatedEvent;
+use Mfc\Picturecredits\Event\AfterImageReferencesLoadedEvent;
+use Mfc\Picturecredits\Utility\ArrayUtility;
+use Psr\EventDispatcher\EventDispatcherInterface;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\QuerySettingsInterface;
@@ -17,8 +21,10 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class FileReferenceRepository extends Repository
 {
-    public function __construct(private ConnectionPool $connectionPool)
-    {
+    public function __construct(
+        private ConnectionPool $connectionPool,
+        private EventDispatcherInterface $eventDispatcher
+    ) {
         parent::__construct();
     }
 
@@ -41,8 +47,10 @@ class FileReferenceRepository extends Repository
             )
             ->execute();
 
-        return array_filter(
-            $result->toArray(),
+        $event = new AfterImageReferencesLoadedEvent($result->toArray());
+        $this->eventDispatcher->dispatch($event);
+        $result = array_filter(
+            ArrayUtility::uniqueObjectsByProperty($event->getFileReferences(), 'uidForeign'),
             function (FileReference $reference) {
                 $qb = $this->connectionPool->getQueryBuilderForTable($reference->getTablenames());
                 $query = $qb->from($reference->getTablenames())
@@ -58,5 +66,10 @@ class FileReferenceRepository extends Repository
                 return $rowCount > 0;
             }
         );
+
+        $event = new AfterImageReferencesDeduplicatedEvent($result);
+        $this->eventDispatcher->dispatch($event);
+
+        return $event->getFileReferences();
     }
 }
