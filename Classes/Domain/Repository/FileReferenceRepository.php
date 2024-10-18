@@ -23,7 +23,7 @@ class FileReferenceRepository extends Repository
 {
     public function __construct(
         private ConnectionPool $connectionPool,
-        private EventDispatcherInterface $eventDispatcher
+        protected EventDispatcherInterface $eventDispatcher
     ) {
         parent::__construct();
     }
