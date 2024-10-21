@@ -13,7 +13,6 @@ use TYPO3\CMS\Extbase\Domain\Model\FileReference as BaseFileReference;
  */
 class FileReference extends BaseFileReference
 {
-    protected ?int $uidLocal = null;
     protected int $uidForeign = 0;
     protected string $tablenames = '';
     protected string $fieldname = '';
