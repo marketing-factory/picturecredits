@@ -13,22 +13,27 @@ use TYPO3\CMS\Extbase\Domain\Model\FileReference as BaseFileReference;
  */
 class FileReference extends BaseFileReference
 {
+    protected ?int $uidLocal = null;
     protected int $uidForeign = 0;
     protected string $tablenames = '';
     protected string $fieldname = '';
 
-    /**
-     * @return int
-     */
+    public function getUidLocal(): ?int
+    {
+        return $this->uidLocal;
+    }
+
+    public function setUidLocal(?int $uidLocal): FileReference
+    {
+        $this->uidLocal = $uidLocal;
+        return $this;
+    }
+
     public function getUidForeign(): int
     {
         return $this->uidForeign;
     }
 
-    /**
-     * @param int $uidForeign
-     * @return FileReference
-     */
     public function setUidForeign(int $uidForeign): FileReference
     {
         $this->uidForeign = $uidForeign;

@@ -49,8 +49,9 @@ class FileReferenceRepository extends Repository
 
         $event = new AfterImageReferencesLoadedEvent($result->toArray());
         $this->eventDispatcher->dispatch($event);
+
         $result = array_filter(
-            ArrayUtility::uniqueObjectsByProperty($event->getFileReferences(), 'uidForeign'),
+            ArrayUtility::uniqueObjectsByProperty($event->getFileReferences(), 'uidLocal'),
             function (FileReference $reference) {
                 $qb = $this->connectionPool->getQueryBuilderForTable($reference->getTablenames());
                 $query = $qb->from($reference->getTablenames())
