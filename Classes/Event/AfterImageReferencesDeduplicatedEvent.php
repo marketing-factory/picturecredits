@@ -9,7 +9,7 @@ final class AfterImageReferencesDeduplicatedEvent
     /**
      * @param FileReference[]|array $fileReferences
      */
-    public function __construct(private readonly array $fileReferences)
+    public function __construct(private array $fileReferences)
     {
     }
 
