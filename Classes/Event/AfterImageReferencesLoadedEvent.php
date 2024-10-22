@@ -9,7 +9,7 @@ final class AfterImageReferencesLoadedEvent
     /**
      * @param FileReference[]|array $fileReferences
      */
-    public function __construct(private readonly array $fileReferences)
+    public function __construct(private array $fileReferences)
     {
     }
 
