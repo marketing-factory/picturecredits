@@ -50,8 +50,8 @@ class FileReferenceRepository extends Repository
         $event = new AfterImageReferencesLoadedEvent($result->toArray());
         $this->eventDispatcher->dispatch($event);
 
-        $result = array_filter(
-            ArrayUtility::uniqueObjectsByProperty($event->getFileReferences(), 'uidLocal'),
+        $result = ArrayUtility::uniqueObjectsByProperty(array_filter(
+            $event->getFileReferences(),
             function (FileReference $reference) {
                 $qb = $this->connectionPool->getQueryBuilderForTable($reference->getTablenames());
                 $query = $qb->from($reference->getTablenames())
@@ -66,7 +66,7 @@ class FileReferenceRepository extends Repository
                 $rowCount = $query->executeQuery()->rowCount();
                 return $rowCount > 0;
             }
-        );
+        ), 'uidLocal');
 
         $event = new AfterImageReferencesDeduplicatedEvent($result);
         $this->eventDispatcher->dispatch($event);
