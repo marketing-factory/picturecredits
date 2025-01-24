@@ -63,7 +63,7 @@ class BackendController extends ActionController {
     {
         $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
         $moduleTemplate->setFlashMessageQueue($this->getFlashMessageQueue());
-        return $moduleTemplate->renderResponse('Import');
+        return $moduleTemplate->renderResponse('Backend/Import');
     }
 
     public function importDefaultRecordsAction(): ResponseInterface
