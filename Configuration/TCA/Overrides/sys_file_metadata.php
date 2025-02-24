@@ -22,7 +22,7 @@ call_user_func(function () {
                     ['label' => '', 'value' => 0],
                 ],
                 'foreign_table' => 'picture_terms',
-                'foreign_table_where' => 'AND {#picture_terms}.{#pid} = 0 AND {#picture_terms}.{#l10n_parent} = 0',
+                'foreign_table_where' => 'AND {#picture_terms}.{#pid} = 0 AND {#picture_terms}.{#l10n_parent} = 0 AND {#picture_terms}.{#hidden} = 0',
                 'default' => 0,
             ],
             'onChange' => 'reload',
