@@ -41,7 +41,7 @@ activate it:
 
 .. tip::
 
-   For more details have a look at :doc:`t3start:Extensions/Management` or
+   For more details have a look at :doc:`t3start:extensions-index` or
    :ref:`t3start:install-extension-with-composer`.
 
 Next: Importing picture terms
