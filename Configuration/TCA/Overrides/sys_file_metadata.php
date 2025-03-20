@@ -1,6 +1,8 @@
 <?php
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 
 if (!defined('TYPO3')) {
     return;
@@ -271,4 +273,10 @@ call_user_func(function () {
     $GLOBALS['TCA'][$table]['palettes']['internal'] = [
         'showitem' => 'note',
     ];
+
+
+    $hideDisabledTermsInMetadata = (bool)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('picturecredits', 'hideDisabledTermsInMetadata');
+    if ($hideDisabledTermsInMetadata) {
+        $GLOBALS['TCA'][$table]['columns']['terms']['config']['foreign_table_where'] = 'AND {#picture_terms}.{#pid} = 0 AND {#picture_terms}.{#l10n_parent} = 0 AND {#picture_terms}.{#hidden} = 0';
+    }
 });

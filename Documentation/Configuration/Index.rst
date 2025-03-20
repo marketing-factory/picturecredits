@@ -36,5 +36,6 @@ Configuration
    :titlesonly:
    :hidden:
 
+   ExtensionConfiguration
    PictureTerms
    TypoScriptReference/Index
