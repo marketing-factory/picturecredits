@@ -36,4 +36,5 @@ Perform the following steps:
 
 ## Support
 
-Free Support is available via [Github Issue Tracker](https://github.com/marketing-factory/ai-filemetadata/issues) For commercial support, please contact us at [info@marketing-factory.de](info@marketing-factory.de)
+Free Support is available via [GitHub Issue Tracker](https://github.com/marketing-factory/picturecredits/issues).
+For commercial support, please contact us at [info@marketing-factory.de](mailto:info@marketing-factory.de)
