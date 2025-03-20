@@ -1,0 +1,2 @@
+# cat=Features; type=boolean; label=LLL:EXT:picturecredits/Resources/Private/Language/locallang_be.xlf:extensionSettings.feature.hideDisabledTermsInMetadata
+hideDisabledTermsInMetadata = 0

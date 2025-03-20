@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" date="2025-03-20T11:14:00Z" product-name="picturecredits"
+          datatype="plaintext" original="EXT:picturecredits/Resources/Private/Language/locallang_be.xlf">
+        <header/>
+        <body>
+            <trans-unit id="extensionSettings.feature.hideDisabledTermsInMetadata" resname="extensionSettings.feature.hideDisabledTermsInMetadata">
+                <source>Do not list disabled picture terms in file metadata records</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
