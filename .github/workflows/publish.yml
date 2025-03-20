@@ -36,6 +36,18 @@ jobs:
           else
             echo ::set-output name=comment::$comment
           fi
+
+      - name: Create release and upload artifacts in the same step
+        uses: softprops/action-gh-release@v2
+        if: ${{startsWith(github.ref, 'refs/tags/') }}
+        with:
+          name: "[RELEASE] ${{ steps.get-version.outputs.version }}"
+          body: "${{ steps.get-comment.outputs.comment }}"
+          generate_release_notes: true
+          files: |
+            tailor-version-artefact/${{ env.TYPO3_EXTENSION_KEY }}_${{ steps.get-version.outputs.version }}.zip
+          fail_on_unmatched_files: true
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -46,4 +58,6 @@ jobs:
         run: composer global require typo3/tailor --prefer-dist --no-progress --no-suggest
 
       - name: Publish to TER
-        run: php ~/.composer/vendor/bin/tailor ter:publish --comment "${{ steps.get-comment.outputs.comment }}" ${{ steps.get-version.outputs.version }}
+        run: |
+          php ~/.composer/vendor/bin/tailor ter:publish --comment "${{ steps.get-comment.outputs.comment }}" ${{ steps.get-version.outputs.version }} \
+          --artefact=tailor-version-artefact/${{ env.TYPO3_EXTENSION_KEY }}_{{ steps.get-version.outputs.version }}.zip
