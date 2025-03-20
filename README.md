@@ -33,3 +33,7 @@ Perform the following steps:
 1. Load and install the extension.
 2. Include the static template *"Picture credits (picturecredits)"* into your TypoScript template.
 3. Import commonly used picture terms in Extension Manager (refer to full documentation for details).
+
+## Support
+
+Free Support is available via [Github Issue Tracker](https://github.com/marketing-factory/ai-filemetadata/issues) For commercial support, please contact us at [info@marketing-factory.de](info@marketing-factory.de)
