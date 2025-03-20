@@ -18,6 +18,7 @@ This extension offers both central image rights management in the TYPO3 file sys
 rendering of picture credits on all pages. It also helps integrators and editors to make the picture credits legally
 secure to avoid written warnings.
 
+[Read more](https://www.marketing-factory.com/services/programming-and-development/custom-development/picture-credits-typo3-extension/)
 
 ## Compatibility
 
