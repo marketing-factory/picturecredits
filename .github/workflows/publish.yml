@@ -51,6 +51,7 @@ jobs:
           php ~/.composer/vendor/bin/tailor set-version "${{ steps.get-version.outputs.version }}"
           php ~/.composer/vendor/bin/tailor ter:publish --comment "${{ steps.get-comment.outputs.comment }}" \
               ${{ steps.get-version.outputs.version }}
+        continue-on-error: true
 
 
       - name: Create Standalone zip
