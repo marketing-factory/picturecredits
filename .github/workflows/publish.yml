@@ -25,7 +25,9 @@ jobs:
           fi
       - name: Get version
         id: get-version
-        run: echo "version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
+        run: |
+          echo "terversion=$(echo ${GITHUB_REF/refs\/tags\//} | sed 's/^v//')" >> $GITHUB_OUTPUT
+          echo "version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
       - name: Get comment
         id: get-comment
@@ -48,17 +50,17 @@ jobs:
 
       - name: Publish to TER
         run: |
-          php ~/.composer/vendor/bin/tailor set-version "${{ steps.get-version.outputs.version }}"
+          php ~/.composer/vendor/bin/tailor set-version "${{ steps.get-version.outputs.terversion }}"
           php ~/.composer/vendor/bin/tailor ter:publish --comment "${{ steps.get-comment.outputs.comment }}" \
-              ${{ steps.get-version.outputs.version }}
+              ${{ steps.get-version.outputs.terversion }}
         continue-on-error: true
 
 
       - name: Create Standalone zip
         run: |
-          php ~/.composer/vendor/bin/tailor set-version "${{ steps.get-version.outputs.version }}"
+          php ~/.composer/vendor/bin/tailor set-version "${{ steps.get-version.outputs.terversion }}"
           php ~/.composer/vendor/bin/tailor create-artefact \
-              ${{ steps.get-version.outputs.version }}  ${{ env.TYPO3_EXTENSION_KEY }}
+              ${{ steps.get-version.outputs.terversion }}  ${{ env.TYPO3_EXTENSION_KEY }}
 
       - name:  upload artifacts in the same step
         uses: softprops/action-gh-release@v2
