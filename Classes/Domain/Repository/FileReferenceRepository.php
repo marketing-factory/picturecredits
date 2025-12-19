@@ -53,6 +53,10 @@ class FileReferenceRepository extends Repository
         $result = ArrayUtility::uniqueObjectsByProperty(array_filter(
             $event->getFileReferences(),
             function (FileReference $reference) {
+                if ($reference->getTablenames() === '') {
+                    return false;
+                }
+
                 $qb = $this->connectionPool->getQueryBuilderForTable($reference->getTablenames());
                 $query = $qb->from($reference->getTablenames())
                     ->select('uid')
