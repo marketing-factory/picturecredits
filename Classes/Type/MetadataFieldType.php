@@ -1,42 +1,49 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Mfc\Picturecredits\Type;
 
-use TYPO3\CMS\Core\Type\Enumeration;
-
-/**
- * Class \Mfc\Picturecredits\Type\MetadataFieldType
- */
-class MetadataFieldType extends Enumeration
+enum MetadataFieldType: int
 {
-    // phpcs:ignore
-    const __default = self::HIDDEN;
+    case HIDDEN = 0;
+    case OPTIONAL = 1;
+    case MANDATORY = 2;
+    case MANDATORY_IF_PRESENT = 3;
 
-    /**
-     * Constants reflecting the table column type
-     */
-    const HIDDEN = 0;
-    const OPTIONAL = 1;
-    const MANDATORY = 2;
-    const MANDATORY_IF_PRESENT = 3;
-
-    /**
-     * @param mixed $type
-     */
-    public function __construct($type = null)
+    public static function fromMixed(mixed $type): self
     {
-        if ($type !== null) {
-            $type = strtoupper((string)$type);
+        if ($type instanceof self) {
+            return $type;
         }
 
-        parent::__construct($type);
+        if ($type === null) {
+            return self::HIDDEN;
+        }
+
+        if (is_string($type)) {
+            $type = strtoupper($type);
+        }
+
+        if (is_int($type)) {
+            return self::from($type);
+        }
+
+        if (is_string($type)) {
+            return match ($type) {
+                'HIDDEN' => self::HIDDEN,
+                'OPTIONAL' => self::OPTIONAL,
+                'MANDATORY' => self::MANDATORY,
+                'MANDATORY_IF_PRESENT' => self::MANDATORY_IF_PRESENT,
+                default => self::from((int)$type),
+            };
+        }
+
+        return self::from((int)$type);
     }
 
-    /**
-     * @return int
-     */
-    public function __toInt()
+    public function toInt(): int
     {
-        return (int)$this->value;
+        return $this->value;
     }
 }
