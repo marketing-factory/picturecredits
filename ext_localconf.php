@@ -13,6 +13,8 @@ $boot = static function (): void {
         [
             PictureCreditsController::class => 'show',
         ],
+        [],
+        ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT,
     );
 
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1660899595] = [

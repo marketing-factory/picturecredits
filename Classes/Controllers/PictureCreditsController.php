@@ -8,6 +8,7 @@ use Mfc\Picturecredits\Domain\Repository\FileReferenceRepository;
 use Mfc\Picturecredits\Utility\PictureTermsResolver;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Frontend\Page\PageInformation;
 
 /**
  * Class PictureCreditsController
@@ -22,7 +23,9 @@ class PictureCreditsController extends ActionController
 
     public function showAction(): ResponseInterface
     {
-        $currentPid = (int)$GLOBALS['TSFE']->id;
+        /** @var PageInformation $pageInformation */
+        $pageInformation = $this->request->getAttribute('frontend.page.information');
+        $currentPid = (int)$pageInformation->getId();
         $fileReferences = $this->fileReferenceRepository->getReferencesOnPage($currentPid);
 
         $this->view->assign('fileReferences', $fileReferences);
