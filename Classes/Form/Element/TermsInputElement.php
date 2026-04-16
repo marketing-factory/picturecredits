@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
+
 namespace Mfc\Picturecredits\Form\Element;
 
 use Doctrine\DBAL\DBALException;
@@ -9,6 +10,7 @@ use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
 use TYPO3\CMS\Backend\Form\NodeFactory;
 use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
+use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Page\JavaScriptModuleInstruction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
@@ -81,10 +83,14 @@ class TermsInputElement extends AbstractFormElement
 
         $itemValue = $parameterArray['itemFormElValue'];
 
+        /** @deprecated Remove icon size enum fallback once we drop v13 support */
         $icons = [
-            'empty' => $this->iconFactory->getIcon('miscellaneous-placeholder', Icon::SIZE_SMALL)->render('inline'),
-            'exclamation' => $this->iconFactory->getIcon('actions-exclamation-triangle-alt', Icon::SIZE_SMALL)->render('inline'),
-            'checkmark' => $this->iconFactory->getIcon('actions-check-circle-alt', Icon::SIZE_SMALL)->render('inline')
+            'empty' => $this->iconFactory->getIcon('miscellaneous-placeholder',
+                class_exists(IconSize::class) ? IconSize::SMALL : Icon::SIZE_SMALL)->render('inline'),
+            'exclamation' => $this->iconFactory->getIcon('actions-exclamation-triangle-alt',
+                class_exists(IconSize::class) ? IconSize::SMALL : Icon::SIZE_SMALL)->render('inline'),
+            'checkmark' => $this->iconFactory->getIcon('actions-check-circle-alt',
+                class_exists(IconSize::class) ? IconSize::SMALL : Icon::SIZE_SMALL)->render('inline')
         ];
         $icon = $icons['empty'];
         $iconClass = '';
@@ -146,21 +152,21 @@ class TermsInputElement extends AbstractFormElement
         $html = [];
         $html[] = $renderedLabel;
         $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
-        $html[] =     $fieldInformationHtml;
-        $html[] =     '<div class="form-control-wrap">';
-        $html[] =         '<div class="form-wizards-wrap">';
-        $html[] =             '<div class="form-wizards-element">';
-        $html[] =                 '<div class="input-group">';
-        $html[] =                     '<span class="input-group-text input-group-icon t3js-termsinput-icons' . $iconClass . $hasInitialValue . '">';
-        $html[] =                         '<span class="t3js-termsinput-icon-default">' . $icon . '</span>';
-        $html[] =                         $iconChecked;
-        $html[] =                     '</span>';
-        $html[] =                     '<input type="text"' . GeneralUtility::implodeAttributes($attributes, true) . ' />';
-        $html[] =                     '<input type="hidden" name="' . $parameterArray['itemFormElName'] . '" value="' . htmlspecialchars((string)$itemValue) . '" />';
-        $html[] =                 '</div>';
-        $html[] =             '</div>';
-        $html[] =         '</div>';
-        $html[] =     '</div>';
+        $html[] = $fieldInformationHtml;
+        $html[] = '<div class="form-control-wrap">';
+        $html[] = '<div class="form-wizards-wrap">';
+        $html[] = '<div class="form-wizards-element">';
+        $html[] = '<div class="input-group">';
+        $html[] = '<span class="input-group-text input-group-icon t3js-termsinput-icons' . $iconClass . $hasInitialValue . '">';
+        $html[] = '<span class="t3js-termsinput-icon-default">' . $icon . '</span>';
+        $html[] = $iconChecked;
+        $html[] = '</span>';
+        $html[] = '<input type="text"' . GeneralUtility::implodeAttributes($attributes, true) . ' />';
+        $html[] = '<input type="hidden" name="' . $parameterArray['itemFormElName'] . '" value="' . htmlspecialchars((string)$itemValue) . '" />';
+        $html[] = '</div>';
+        $html[] = '</div>';
+        $html[] = '</div>';
+        $html[] = '</div>';
         $html[] = '</div>';
         $resultArray['html'] = implode(LF, $html);
 
