@@ -22,7 +22,7 @@ secure to avoid written warnings.
 
 ## Compatibility
 
-TYPO3 12.4.9 - 13.4.99
+TYPO3 13.4.0 - 14.3.99
 
 
 ## Installation
