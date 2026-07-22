@@ -76,7 +76,7 @@ class TermsRadioElement extends AbstractFormElement
                 $fieldType = (int)$termsRecord[$prefixedFieldName];
                 $termsDefaultValue = (int)$termsRecord[$fieldName];
 
-                if ($fieldType === MetadataFieldType::HIDDEN) {
+                if ($fieldType === MetadataFieldType::HIDDEN->value) {
                     return $resultArray = [];
                 }
             }

@@ -80,12 +80,12 @@ class PictureTermsResolver
 
             $resolvedValue = '';
             switch ($controlPropertyValue) {
-                case MetadataFieldType::MANDATORY:
-                case MetadataFieldType::MANDATORY_IF_PRESENT:
-                case MetadataFieldType::OPTIONAL:
+                case MetadataFieldType::MANDATORY->value:
+                case MetadataFieldType::MANDATORY_IF_PRESENT->value:
+                case MetadataFieldType::OPTIONAL->value:
                     $resolvedValue = !empty($fileValue) ? $fileValue : $fallbackValue;
                     break;
-                case MetadataFieldType::HIDDEN:
+                case MetadataFieldType::HIDDEN->value:
                     $resolvedValue = $fallbackValue;
                     break;
             }

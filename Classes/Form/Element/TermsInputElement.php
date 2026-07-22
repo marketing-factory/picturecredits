@@ -123,14 +123,14 @@ class TermsInputElement extends AbstractFormElement
                 $fieldType = (int)$termsRecord[$prefixedFieldName];
 
                 // Depending on field configuration: don't render field, or set mandatory hints:
-                if ($fieldType === MetadataFieldType::HIDDEN) {
+                if ($fieldType === MetadataFieldType::HIDDEN->value) {
                     return $resultArray = $this->initializeResultArray();
-                } elseif ($fieldType === MetadataFieldType::MANDATORY) {
+                } elseif ($fieldType === MetadataFieldType::MANDATORY->value) {
                     $iconClass = ' is-mandatory';
                     $icon = $icons['exclamation'];
                     $iconChecked = '<span class="t3js-termsinput-icon-checked">' . $icons['checkmark'] . '</span>';
                     $attributes['class'] .= ' t3js-mandatory-term';
-                } elseif ($fieldType === MetadataFieldType::MANDATORY_IF_PRESENT) {
+                } elseif ($fieldType === MetadataFieldType::MANDATORY_IF_PRESENT->value) {
                     $iconClass = ' is-mandatory-if-present';
                     $icon = $icons['exclamation'];
                     $iconChecked = '<span class="t3js-termsinput-icon-checked">' . $icons['checkmark'] . '</span>';

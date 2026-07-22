@@ -30,19 +30,19 @@ class TableConfigurationUtility
                 'items' => [
                     [
                         'label' => $ll . 'type.metadata_field_type.hidden',
-                        'value' => MetadataFieldType::HIDDEN
+                        'value' => MetadataFieldType::HIDDEN->value
                     ],
                     [
                         'label' => $ll . 'type.metadata_field_type.optional',
-                        'value' => MetadataFieldType::OPTIONAL
+                        'value' => MetadataFieldType::OPTIONAL->value
                     ],
                     [
                         'label' => $ll . 'type.metadata_field_type.mandatory',
-                        'value' => MetadataFieldType::MANDATORY
+                        'value' => MetadataFieldType::MANDATORY->value
                     ],
                     [
                         'label' => $ll . 'type.metadata_field_type.mandatory_if_present',
-                        'value' => MetadataFieldType::MANDATORY_IF_PRESENT
+                        'value' => MetadataFieldType::MANDATORY_IF_PRESENT->value
                     ],
                 ],
             ],
@@ -72,11 +72,11 @@ class TableConfigurationUtility
                 'items' => [
                     [
                         'label' => $ll . 'type.metadata_field_type.hidden',
-                        'value' => MetadataFieldType::HIDDEN
+                        'value' => MetadataFieldType::HIDDEN->value
                     ],
                     [
                         'label' => $ll . 'type.metadata_field_type.optional',
-                        'value' => MetadataFieldType::OPTIONAL
+                        'value' => MetadataFieldType::OPTIONAL->value
                     ],
                 ],
             ],
