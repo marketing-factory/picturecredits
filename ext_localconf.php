@@ -8,7 +8,7 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 $boot = static function (): void {
     ExtensionUtility::configurePlugin(
-        'PictureCredits',
+        'Picturecredits',
         'PictureCredits',
         [
             PictureCreditsController::class => 'show',

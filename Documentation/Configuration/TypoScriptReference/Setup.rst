@@ -29,7 +29,7 @@ Setup
     lib.picture_credits = USER_INT
     lib.picture_credits {
         userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-        extensionName = PictureCredits
+        extensionName = Picturecredits
         pluginName = PictureCredits
         controllerName = PictureCredit
     }

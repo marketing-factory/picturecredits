@@ -8,9 +8,7 @@ if (!defined('TYPO3')) {
 
 ExtensionUtility::registerPlugin(
     'Picturecredits',
-    'Picturecredits',
+    'PictureCredits',
     'Displays picture credits',
     'EXT:picturecredits/Resources/Public/Icons/Extension.svg',
 );
-
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['picturecredits_picturecredits'] = 'recursive,pages';
