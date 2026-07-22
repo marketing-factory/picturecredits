@@ -107,7 +107,7 @@ regular content pages.
    :titlesonly:
 
    Introduction/Index
-   Installation/Index
+   Administrator/Index
    Configuration/Index
    EditorsManual/Index
    Templates/Index
