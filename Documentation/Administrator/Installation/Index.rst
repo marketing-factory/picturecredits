@@ -16,14 +16,6 @@ If your TYPO3 installation uses Composer, install the latest version of Picture 
 
     composer require mfc/picturecredits
 
-Installing the extension prior to TYPO3 11.4
---------------------------------------------
-Before TYPO3 11.4 you have to activate extension installed via Composer by using the Extension Manager:
-
-* Navigate to :guilabel:`Admin Tools > Extensions > Installed Extensions`
-* Search for :literal:`picturecredits`
-* Activate the extension by clicking on the :guilabel:`Activate button` in the :guilabel:`A/D` column
-
 Extension Manager
 =================
 
