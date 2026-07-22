@@ -11,4 +11,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:picturecredits/Resources/Public/Icons/backend-module-theme.svg'
     ],
+    'content-picturecredits-plugin' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:picturecredits/Resources/Public/Icons/Extension.svg'
+    ],
 ];

@@ -10,5 +10,6 @@ ExtensionUtility::registerPlugin(
     'Picturecredits',
     'PictureCredits',
     'Displays picture credits',
-    'EXT:picturecredits/Resources/Public/Icons/Extension.svg',
+    'content-picturecredits-plugin',
 );
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['picturecredits_picturecredits'] = 'content-picturecredits-plugin';
